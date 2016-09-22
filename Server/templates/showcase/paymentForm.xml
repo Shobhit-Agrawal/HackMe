@@ -3,41 +3,67 @@
 <document>
     <head>
       <style> .wrapper { width: 1000; tv-position: top;margin: 50 0 0 460; } 
-             .upperLeftCard {  width: 400; height: 400; background-color: red;tv-align: left;tv-position: top-left;} .font{font-size:800px;
+             .upperLeftCard {  width: 400; height: 400; background-color: red;tv-align: left;tv-position: top-left;}.
              2}
       </style>
     </head>
-        <listTemplate>
-          <list>
-             <header>
-                <title>Payments</title>
-             </header>
-             <section>
-                <listItemLockup>
-                         <!-- <img src="/resources/images/payment/visa.png" width="300" height="200" /> -->
-                    <title>Visa ****1111</title> 
-                    
-                </listItemLockup>
-                <listItemLockup>
-                    <title>MasterCard ****4444</title>
-                    <badge src= "/resources/images/payment/mc.png" alt="additional identifier" accessibility="" />
-                         <!-- <img src="/resources/images/payment/mc.png" width="300" height="200" /> -->
-                </listItemLockup>
-
-                <listItemLockup>
-                    <title>VisaCheckout</title>
-                    <badge src= "/resources/images/payment/visaCheckout.png" alt="additional identifier" accessibility="" />
-                </listItemLockup>
-
-                 <listItemLockup>
-                    <title>Apple Pay</title>
-                    <badge src= "/resources/images/payment/visaCheckout.png" alt="additional identifier" accessibility="" />
-                </listItemLockup>
-                <listItemLockup>
-                 <title> <font>+</font> Add Credit Card</title>
-                </listItemLockup>
-             </section>
-          </list>
-       </listTemplate>
+ <listTemplate>
+      <list>
+         <header>
+            <title>Payments</title>
+         </header>
+         <section>
+            <listItemLockup>
+               <title>Visa ****1111</title>
+               <relatedContent>
+                  <lockup>
+                     <img src="/resources/images/payment/hoodie_large.png" width="857" height="482" />
+                     <title></title>
+                     <description></description>
+                  </lockup>
+               </relatedContent>
+            </listItemLockup>
+            <listItemLockup>
+               <title>MasterCard ****4444</title>
+               <relatedContent>
+                  <lockup>
+                     <img src="/resources/images/payment/hoodie_large.png" width="857" height="482" />
+                     <title></title>
+                     <description></description>
+                  </lockup>
+               </relatedContent>
+            </listItemLockup>
+            <listItemLockup>
+               <title>VisaCheckout</title>
+               <relatedContent>
+                  <lockup>
+                     <img src="/resources/images/payment/hoodie_large.png" width="857" height="482" />
+                     <title></title>
+                     <description></description>
+                  </lockup>
+               </relatedContent>
+            </listItemLockup>
+             <listItemLockup>
+               <title>Apple Pay</title>
+               <relatedContent>
+                  <lockup>
+                     <img src="/resources/images/payment/hoodie_large.png" width="857" height="482" />
+                     <title></title>
+                     <description></description>
+                  </lockup>
+               </relatedContent>
+            </listItemLockup>
+              <listItemLockup>
+               <title>+ Add CreditCard</title>
+               <relatedContent>
+                  <lockup>
+                     <img src="/resources/images/payment/hoodie_large.png" width="857" height="482" />
+                     <title></title>
+                     <description></description>
+                  </lockup>
+               </relatedContent>
+            </listItemLockup>
+         </section>
+      </list>
+   </listTemplate>
 </document>
-
