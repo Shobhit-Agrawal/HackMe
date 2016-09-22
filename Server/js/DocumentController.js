@@ -125,13 +125,17 @@ function makeTransaction () {
                 "refId": "123456",
                 "transactionRequest": {
                     "transactionType": "authCaptureTransaction",
-                    "amount": 10,
+                    "amount": 15,
                     "payment": {
                         "creditCard": {
-                            "cardNumber": "5424000000000015",
+                            "cardNumber": "4111111111111111",
                             "expirationDate": "1220",
                             "cardCode": "125"
-                        }
+                        },
+                    "order":{
+                "invoiceNumber": "INV#1234",
+                "description":"SEATTLE RIOT CAP"
+              }
                     }
                 }
             }
