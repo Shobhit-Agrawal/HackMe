@@ -202,5 +202,3 @@ DocumentController.prototype.handleEvent = function(event) {
         navigationDocument.presentModal(alertDocument);
     }*/
 };
-
-© 2016 GitHub, Inc. Terms Privacy Security Status Help
