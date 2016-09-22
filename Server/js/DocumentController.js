@@ -64,7 +64,7 @@ DocumentController.prototype.handleDocument = function(document, loadingDocument
 function launchPlayer() {  
    var player = new Player();  
    var playlist = new Playlist();  
-   var mediaItem = new MediaItem("video", "http://accept-tv.azurewebsites.net/Server/resources/video/ultimate_clip.mp4");  
+   var mediaItem = new MediaItem("video", "http://accept-tv.azurewebsites.net/Server/resources/video/9-clip_480p.mov");  
    player.playlist = playlist;  
    player.playlist.push(mediaItem);  
    player.present();
@@ -108,19 +108,26 @@ function pushDoc(template) {
 
 
 function showResponse(xobj) {
+    navigationDocument.dismissModal();
     var responseText = JSON.parse(xobj.responseText);
+
     const alertDocument = createDescriptiveAlertDocument('Order Placed. Thank you!', (responseText.transactionResponse.transId));
+
+   
         navigationDocument.presentModal(alertDocument);
 
 }
 
 function makeTransaction () {
 
+     const alertDocument1 = createLoadingDocument("Placing Order...");
+         navigationDocument.presentModal(alertDocument1);  
+
     var json = {
             "createTransactionRequest": {
                 "merchantAuthentication": {
-                    "name": "8zw38TXp",
-                    "transactionKey": "29L3e238quN7yqQT"
+                    "name": "5KP3u95bQpv",
+                    "transactionKey": "346HZ32z3fP4hTG2"
                 },
                 "refId": "123456",
                 "transactionRequest": {
@@ -158,16 +165,16 @@ function makeTransaction () {
 DocumentController.prototype.handleEvent = function(event) {
     const target = event.target;
     var loadingDocument;
-    var str = target.getAttribute("type");
-    console.log(target+"hello"+str)
-    showPaymentForm();
-    if( str === 'creditCard'){
+    var str = target.getAttribute("id");
+    
+    if( str === 'WatchMeID'){
         launchPlayer()
 
     }
-    if( str === 'visaCheckout'){
-        makeTransaction();
+    else{
+        showPaymentForm();
     }
+    
     //launchPlayer()
     //makeTransaction();
   //  typeof Accept.dispatchData;
