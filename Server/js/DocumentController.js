@@ -109,7 +109,7 @@ function pushDoc(template) {
 
 function showResponse(xobj) {
     var responseText = JSON.parse(xobj.responseText);
-    const alertDocument = createDescriptiveAlertDocument('Order Placed, Thanks a lot!! /n Your transaction ID is:', (responseText.transactionResponse.transId));
+    const alertDocument = createDescriptiveAlertDocument('Order Placed. Thank you!', (responseText.transactionResponse.transId));
         navigationDocument.presentModal(alertDocument);
 
 }
