@@ -50,6 +50,7 @@ registerAttributeName('documentURL', DocumentController);
 DocumentController.prototype.setupDocument = function(document) {
     document.addEventListener("select", this.handleEvent);
     document.addEventListener("play", this.handleEvent);
+    document.addEventListener("change", function(event){console.log("Helloooooooooooooooooooooooooooooooooooooo")});//this.makeTransaction
     //document.addEventListener("highlight", this.handleMenu);
 };
 
@@ -60,6 +61,7 @@ DocumentController.prototype.handleDocument = function(document, loadingDocument
         navigationDocument.pushDocument(document);
     }
 };
+
 function launchPlayer() {  
    var player = new Player();  
    var playlist = new Playlist();  
@@ -73,6 +75,13 @@ function launchPlayer() {
 DocumentController.prototype.handleMenu = function (event) {
     const alertDocument = createAlertDocument("Shobhit", "here", false);
     this.handleDocument(alertDocument, false);
+}
+
+function showPayType (){
+    var paymentURL = "http://localhost:9001/templates/showcase/paymentForm.xml";   //"templates/Index.xml";
+           getDocument(paymentURL)
+           
+
 }
 
 function showPaymentForm () {
@@ -101,7 +110,7 @@ function showResponse(xobj) {
 
 }
 
-function makeTransaction() {
+DocumentController.prototype.makeTransaction = function() {
 
     var json = {
             "createTransactionRequest": {
@@ -141,7 +150,9 @@ function makeTransaction() {
 DocumentController.prototype.handleEvent = function(event) {
     const target = event.target;
     var loadingDocument;
-    makeTransaction();
+    showPayType();
+    //launchPlayer()
+    //makeTransaction();
   //  typeof Accept.dispatchData;
     //const alertDocument = createDescriptiveAlertDocument('', typeof Accept.dispatchData);
      //   navigationDocument.presentModal(alertDocument);

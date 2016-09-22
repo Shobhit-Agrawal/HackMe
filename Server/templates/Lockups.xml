@@ -90,7 +90,7 @@ See LICENSE.txt for this sample’s licensing information
 					<lockup>
 						<img src="/resources/images/carousel/carousel_1.lcr" width="1740" height="500" />
 						<overlay>
-							<title>Overlay Title</title>
+							<title>Surya Title</title>
 							<subtitle>Overlay Subtitle</subtitle>
 						</overlay>
 					</lockup>
@@ -98,7 +98,7 @@ See LICENSE.txt for this sample’s licensing information
 						<img src="/resources/images/carousel/carousel_2.lcr" width="1740" height="500" />
 						<overlay class="carouselOverlay">
 							<img class="carouselOverlayImg" src="/resources/images/lockups/square_1.jpg" width="160" height="160"/>
-							<title class="carouselOverlayTitle">Overlay Title</title>
+							<title class="carouselOverlayTitle">Shobhit Title</title>
 							<subtitle class="carouselOverlaySubtitle">Overlay Subtitle</subtitle>
 							<text class="carouselOverlayText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</text>
 						</overlay>
