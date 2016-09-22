@@ -62,7 +62,7 @@ See LICENSE.txt for this sample’s licensing information
           </buttonLockup>
         </row>
       </stack>
-      <heroImg src="/resources/images/general/USAU_blade.jpg" width="400" height="600" />
+      <heroImg src="/resources/images/general/product.jpg" width="400" height="600" />
     </banner>
     <shelf class="9ColumnGrid">
       <header>
