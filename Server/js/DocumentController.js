@@ -120,8 +120,7 @@ function showResponse(xobj) {
 
 function makeTransaction () {
 
-     const alertDocument1 = createLoadingDocument("Placing Order...");
-         navigationDocument.pushDocument(alertDocument1);  
+  
 
     var json = {
             "createTransactionRequest": {
