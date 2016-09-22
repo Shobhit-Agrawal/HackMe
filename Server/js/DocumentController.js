@@ -131,12 +131,12 @@ function makeTransaction () {
                             "cardNumber": "4111111111111111",
                             "expirationDate": "1220",
                             "cardCode": "125"
+                            }
                         },
                     "order":{
                 "invoiceNumber": "INV#1234",
                 "description":"SEATTLE RIOT CAP"
-              }
-                    }
+                         }
                 }
             }
         }
