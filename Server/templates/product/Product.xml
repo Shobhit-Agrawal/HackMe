@@ -24,50 +24,41 @@ See LICENSE.txt for this sample’s licensing information
           <header>
             <title>genre</title>
           </header>
-          <text>Genre Name</text>
+          <text>Sports</text>
         </info>
         <info>
           <header>
-            <title>director</title>
+            <title>Teams</title>
           </header>
-          <text>Director Name</text>
-        </info>
-        <info>
-          <header>
-            <title>starring</title>
-          </header>
-          <text>Actor 1</text>
-          <text>Actor 2</text>
-          <text>Actor 3</text>
-          <text>Actor 4</text>
-          <text>Actor 5</text>
+          <text>Seattle Riot</text>
+          <text>San Francisco Fury</text>
         </info>
       </infoList>
       <stack>
-        <title>Product Title</title>
+        <title>US Ultimate</title>
         <!-- In lieu of title an image can be used of size max dimensions of 846x130 -->
         <!-- <img src="" width="846.0" height="130.0" /> -->
         <row>
           <text><badge src="resource://tomato-fresh" style="margin:0 0 -3"/> 90%</text>
-          <text>Text 1</text>
-          <text>Text 2</text>
-          <text>Text 3</text>
+          <text>Action</text>
+          <text>Alt</text>
+          <text>Sports</text>
           <badge src="resource://mpaa-pg" class="badge" />
           <badge src="resource://cc" class="badge" />
         </row>
-        <description allowsZooming="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</description>
+        <description allowsZooming="true">Combining the non-stop movement and athletic endurance of soccer with the aerial passing skills of football, a game of ultimate is played by two teams with a flying disc on a field with end zones, similar to football.  Ultimate is played in more than 80 countries by an estimated 7 million of men and women, girls and boys.  The international governing body, WFDF, represents 59 member associations in 56 countries.</description>
         <row>
           <buttonLockup>
             <badge src="resource://button-preview" />
-            <title>Title 1</title>
+            <title>Watch Live</title>
           </buttonLockup>
           <buttonLockup>
             <badge src="resource://button-play" />
-            <title>Title 2</title>
+            <title>Replay Boston v San Francisco</title>
           </buttonLockup>
           <buttonLockup>
             <badge src="resource://button-add" />
-            <title>Title 3</title>
+            <title>Replay Seattle v Denver</title>
           </buttonLockup>
         </row>
       </stack>
@@ -75,24 +66,24 @@ See LICENSE.txt for this sample’s licensing information
     </banner>
     <shelf class="9ColumnGrid">
       <header>
-        <title>Shelf Header (148x226, 9 Column Grid, 51 spacing)</title>
+        <title>Live the Game</title>
       </header>
       <section>
         <lockup>
-          <img src="/resources/images/lockups/movie_1.lcr" width="148" height="226" />
-          <title class="showTextOnHighlight">Title 1</title>
+          <img src="/resources/images/lockups/2015_Hoodie_Front.jpg" width="148" height="226" />
+          <title class="showTextOnHighlight">Seattle Riot Hoodie</title>
         </lockup>
         <lockup>
           <img src="/resources/images/lockups/movie_2.lcr" width="148" height="226" />
-          <title class="showTextOnHighlight">Title 2</title>
+          <title class="showTextOnHighlight">San Fancisco Jersey</title>
         </lockup>
         <lockup>
           <img src="/resources/images/lockups/movie_3.lcr" width="148" height="226" />
-          <title class="showTextOnHighlight">Title 3</title>
+          <title class="showTextOnHighlight">USA Premium Game Disc</title>
         </lockup>
         <lockup>
           <img src="/resources/images/lockups/movie_4.lcr" width="148" height="226" />
-          <title class="showTextOnHighlight">Title 4</title>
+          <title class="showTextOnHighlight"></title>
         </lockup>
         <lockup>
           <img src="/resources/images/lockups/movie_5.lcr" width="148" height="226" />
