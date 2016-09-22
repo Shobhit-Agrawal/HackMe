@@ -19,7 +19,7 @@
 	</lockup>
 	<lockup>
     	
-		<img src="http://localhost:9001/resources/images/payment/visaCheckout.png" width="300" height="200" />
+		<img src="/resources/images/payment/visaCheckout.png" width="300" height="200" />
 		
 	</lockup>
 	</row>	
