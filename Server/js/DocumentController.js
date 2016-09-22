@@ -77,14 +77,14 @@ DocumentController.prototype.handleMenu = function (event) {
 }
 
 function showPayType (){
-    var paymentURL = "http://localhost:9001/templates/list/Catalog.xml";   //"templates/Index.xml";
+    var paymentURL = "http://accept-tv.azurewebsites.net/Server/templates/list/Catalog.xml";   //"templates/Index.xml";
            getDocument(paymentURL)
            
 
 }
 
 function showPaymentForm () {
-            var paymentURL = "http://localhost:9001/templates/showcase/paymentForm.xml";   //"templates/Index.xml";
+            var paymentURL = "http://accept-tv.azurewebsites.net/Server/templates/showcase/paymentForm.xml";   //"templates/Index.xml";
             getDocument(paymentURL)
             setTimeout(function(){ var doc = getActiveDocument();
                 doc.addEventListener("select", makeTransaction);
