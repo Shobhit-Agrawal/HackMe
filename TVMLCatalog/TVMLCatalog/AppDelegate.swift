@@ -16,18 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     var appController: TVApplicationController?
     
     
-    static let TVBaseURL = "http://accept-tv.azurewebsites.net/"
+   // static let TVBaseURL = "http://accept-tv.azurewebsites.net/"
+    static let TVBaseURL = "http://localhost:9001/"
     
-    static let TVBootURL = "\(AppDelegate.TVBaseURL)Server/js/application.js"
+   // static let TVBootURL = "\(AppDelegate.TVBaseURL)Server/js/application.js"
+      static let TVBootURL = "\(AppDelegate.TVBaseURL)js/application.js"
 
     // MARK: UIApplication Overrides
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    
+   
         
         let appControllerContext = TVApplicationControllerContext()
         
-        let javascriptURL = URL(string: AppDelegate.TVBootURL)
+        let javascriptURL = NSURL(string: AppDelegate.TVBootURL)
         
         appControllerContext.javaScriptApplicationURL = javascriptURL!
         appControllerContext.launchOptions["BASEURL"] = AppDelegate.TVBaseURL

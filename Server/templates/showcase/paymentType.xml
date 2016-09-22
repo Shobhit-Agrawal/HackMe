@@ -11,17 +11,19 @@
          <img src="http://localhost:9001/resources/images/background/background.jpg" />
     </background>
     <title>How You Want to Pay</title>
-     <row>  
-    <lockup>
-    	
-		<img src="http://localhost:9001/resources/images/payment/payCreditCard.jpeg" width="300" height="200" />
-		
-	</lockup>
-	<lockup>
-    	
-		<img src="http://localhost:9001/resources/images/payment/visaCheckout.png" width="300" height="200" />
-		
-	</lockup>
+     <row> 
+      <carousel>
+      
+        <lockup>
+		      <img src="http://localhost:9001/resources/images/payment/payCreditCard.jpeg" width="300" height="200" />
+		    </lockup>
+      
+        <lockup>
+          <img src="http://localhost:9001/resources/images/payment/visaCheckout.png" width="300" height="200" />
+        </lockup>
+      
+	</carousel>
+ 
 	</row>	
 	<row>
       <button>
