@@ -64,7 +64,7 @@ DocumentController.prototype.handleDocument = function(document, loadingDocument
 function launchPlayer() {  
    var player = new Player();  
    var playlist = new Playlist();  
-   var mediaItem = new MediaItem("video", "http://trailers.apple.com/movies/focus_features/9/9-clip_480p.mov");  
+   var mediaItem = new MediaItem("video", "http://accept-tv.azurewebsites.net/Server/resources/video/ultimate_clip.mp4");  
    player.playlist = playlist;  
    player.playlist.push(mediaItem);  
    player.present();
