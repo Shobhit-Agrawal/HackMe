@@ -118,14 +118,7 @@ function showResponse(xobj) {
 
 }
 
-function showLoader(){
-    const alertDocument1 = createLoadingDocument("Placing Order...");
-    navigationDocument.pushDocument(alertDocument1);  
-    setTimeout(function(){ makeTransaction();
-             }, 1000);
 
-
-}
 
 function makeTransaction () {
 
