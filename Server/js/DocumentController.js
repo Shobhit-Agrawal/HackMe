@@ -122,8 +122,8 @@ function makeTransaction () {
     var json = {
             "createTransactionRequest": {
                 "merchantAuthentication": {
-                    "name": "8zw38TXp",
-                    "transactionKey": "29L3e238quN7yqQT"
+                    "name": "5KP3u95bQpv",
+                    "transactionKey": "346HZ32z3fP4hTG2"
                 },
                 "refId": "123456",
                 "transactionRequest": {
