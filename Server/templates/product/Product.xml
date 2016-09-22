@@ -62,7 +62,7 @@ See LICENSE.txt for this sample’s licensing information
           </buttonLockup>
         </row>
       </stack>
-      <heroImg src="/resources/images/general/product.jpg" width="400" height="600" />
+      <heroImg src="/resources/images/general/ultimate_hero.png" width="400" height="600" />
     </banner>
     <shelf class="9ColumnGrid">
       <header>
@@ -74,16 +74,16 @@ See LICENSE.txt for this sample’s licensing information
           <title class="showTextOnHighlight">Seattle Riot Hoodie</title>
         </lockup>
         <lockup>
-          <img src="/resources/images/lockups/movie_2.lcr" width="148" height="226" />
-          <title class="showTextOnHighlight">San Fancisco Jersey</title>
+          <img src="/resources/images/lockups/USA-Hoodie.jpeg" width="148" height="226" />
+          <title class="showTextOnHighlight">USA Ultimate Hoodie</title>
         </lockup>
         <lockup>
-          <img src="/resources/images/lockups/movie_3.lcr" width="148" height="226" />
-          <title class="showTextOnHighlight">USA Premium Game Disc</title>
+          <img src="/resources/images/lockups/disc.jpeg" width="148" height="226" />
+          <title class="showTextOnHighlight">USA Ultimate Championship Disc</title>
         </lockup>
         <lockup>
-          <img src="/resources/images/lockups/movie_4.lcr" width="148" height="226" />
-          <title class="showTextOnHighlight"></title>
+          <img src="/resources/images/lockups/Hat_Mesh_Snap_Back_Front.jpeg" width="148" height="226" />
+          <title class="showTextOnHighlight">Seattle Riot Cap</title>
         </lockup>
         <lockup>
           <img src="/resources/images/lockups/movie_5.lcr" width="148" height="226" />
