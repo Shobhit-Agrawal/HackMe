@@ -3,7 +3,8 @@
 <document>
     <head>
       <style> .wrapper { width: 1000; tv-position: top;margin: 50 0 0 460; } 
-             .upperLeftCard {  width: 400; height: 400; background-color: red;tv-align: left;tv-position: top-left; } 
+             .upperLeftCard {  width: 400; height: 400; background-color: red;tv-align: left;tv-position: top-left;} .font{font-size:800px;
+             2}
       </style>
     </head>
         <listTemplate>
@@ -13,34 +14,27 @@
              </header>
              <section>
                 <listItemLockup>
-                   <title>Movie 1</title>
-                   <relatedContent>
-                      <lockup>
-                <img src="http://localhost:9001/resources/images/payment/visa.png" width="300" height="200" />
-                         <title>Movie 1</title>
-                         <description>A brief description for the first movie should go here.</description>
-                      </lockup>
-                   </relatedContent>
+                         <!-- <img src="/resources/images/payment/visa.png" width="300" height="200" /> -->
+                    <title>Visa ****1111</title> 
+                    
                 </listItemLockup>
                 <listItemLockup>
-                   <title>Movie 2</title>
-                   <relatedContent>
-                      <lockup>
-                          <img src="http://localhost:9001/resources/images/payment/mc.png" width="300" height="200" />
-                         <title>Movie 2</title>
-                         <description>A brief description for the second movie should go here.</description>
-                      </lockup>
-                   </relatedContent>
+                    <title>MasterCard ****4444</title>
+                    <badge src= "/resources/images/payment/mc.png" alt="additional identifier" accessibility="" />
+                         <!-- <img src="/resources/images/payment/mc.png" width="300" height="200" /> -->
+                </listItemLockup>
+
+                <listItemLockup>
+                    <title>VisaCheckout</title>
+                    <badge src= "/resources/images/payment/visaCheckout.png" alt="additional identifier" accessibility="" />
+                </listItemLockup>
+
+                 <listItemLockup>
+                    <title>Apple Pay</title>
+                    <badge src= "/resources/images/payment/visaCheckout.png" alt="additional identifier" accessibility="" />
                 </listItemLockup>
                 <listItemLockup>
-                   <title>Movie 3</title>
-                   <relatedContent>
-                      <lockup>
-                          <img src="http://localhost:9001/resources/images/payment/mc.png" width="300" height="200" />
-                         <title>Movie 3</title>
-                         <description>A brief description for the third movie should go here.</description>
-                      </lockup>
-                   </relatedContent>
+                 <title> <font>+</font> Add Credit Card</title>
                 </listItemLockup>
              </section>
           </list>
