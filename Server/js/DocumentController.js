@@ -97,8 +97,8 @@ function getDocument(url) {
     return templateXHR;
 }
 function pushDoc(template) {
-    var parsedTemplate = templateParser.parseFromString(template, "application/xml");
-    navigationDocument.pushDocument(parsedTemplate);
+    
+    navigationDocument.presentModal(template);
     // body...
 }
 
