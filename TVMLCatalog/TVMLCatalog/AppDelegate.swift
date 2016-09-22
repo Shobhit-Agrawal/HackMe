@@ -23,12 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     //static let TVBootURL = "\(AppDelegate.TVBaseURL)js/application.js"
 
     // MARK: UIApplication Overrides
+    //func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+     //   self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        self.window = UIWindow(frame: UIScreen.main.bounds)
     
-   
+  
+    
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let appControllerContext = TVApplicationControllerContext()
         
