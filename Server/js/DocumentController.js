@@ -114,15 +114,14 @@ function showResponse(xobj) {
     const alertDocument = createDescriptiveAlertDocument('Order Placed. Thank you!', (responseText.transactionResponse.transId));
 
    
-        navigationDocument.replaceDocument(alertDocument);
+        navigationDocument.presentModal(alertDocument);
 
 }
 
-
-
 function makeTransaction () {
 
-     
+     const alertDocument1 = createLoadingDocument("Placing Order...");
+         navigationDocument.pushDocument(alertDocument1);  
 
     var json = {
             "createTransactionRequest": {
