@@ -64,7 +64,7 @@ DocumentController.prototype.handleDocument = function(document, loadingDocument
 function launchPlayer() {  
    var player = new Player();  
    var playlist = new Playlist();  
-   var mediaItem = new MediaItem("video", "http://accept-tv.azurewebsites.net/Server/resources/video/ultimate_clip.mp4");  
+   var mediaItem = new MediaItem("video", "http://accept-tv.azurewebsites.net/Server/resources/video/9-clip_480p.mov");  
    player.playlist = playlist;  
    player.playlist.push(mediaItem);  
    player.present();
@@ -108,6 +108,7 @@ function pushDoc(template) {
 
 
 function showResponse(xobj) {
+    navigationDocument.dismissModal();
     var responseText = JSON.parse(xobj.responseText);
 
     const alertDocument = createDescriptiveAlertDocument('Order Placed. Thank you!', (responseText.transactionResponse.transId));
@@ -118,6 +119,9 @@ function showResponse(xobj) {
 }
 
 function makeTransaction () {
+
+     const alertDocument1 = createLoadingDocument("Placing Order...");
+         navigationDocument.presentModal(alertDocument1);  
 
     var json = {
             "createTransactionRequest": {
