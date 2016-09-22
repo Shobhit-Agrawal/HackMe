@@ -6,23 +6,23 @@
              .upperLeftCard {  width: 400; height: 400; background-color: red;tv-align: left;tv-position: top-left; } 
       </style>
     </head>
-    <divTemplate>
+    <descriptiveAlertTemplate>
     <background>
          <img src="http://localhost:9001/resources/images/background/background.jpg" />
     </background>
     <title>How You Want to Pay</title>
      <row> 
-      <section> 
+      <carousel>
+      
         <lockup>
 		      <img src="http://localhost:9001/resources/images/payment/payCreditCard.jpeg" width="300" height="200" />
 		    </lockup>
-      </section>
-      <section> 
+      
         <lockup>
           <img src="http://localhost:9001/resources/images/payment/visaCheckout.png" width="300" height="200" />
         </lockup>
-      </section>
-	
+      
+	</carousel>
  
 	</row>	
 	<row>
@@ -31,6 +31,6 @@
       </button>
         
    </row>		
-    </divTemplate>
+    </descriptiveAlertTemplate>
 </document>
 
