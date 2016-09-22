@@ -162,10 +162,13 @@ DocumentController.prototype.handleEvent = function(event) {
     const target = event.target;
     var loadingDocument;
     var str = target.getAttribute("id");
-    showPaymentForm();
+    
     if( str === 'WatchMeID'){
         launchPlayer()
 
+    }
+    else{
+        showPaymentForm();
     }
     
     //launchPlayer()
