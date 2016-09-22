@@ -108,19 +108,26 @@ function pushDoc(template) {
 
 
 function showResponse(xobj) {
+    navigationDocument.dismissModal();
     var responseText = JSON.parse(xobj.responseText);
+
     const alertDocument = createDescriptiveAlertDocument('Order Placed. Thank you!', (responseText.transactionResponse.transId));
+
+   
         navigationDocument.presentModal(alertDocument);
 
 }
 
 function makeTransaction () {
 
+     const alertDocument1 = createLoadingDocument("Placing Order...");
+         navigationDocument.pushDocument(alertDocument1);  
+
     var json = {
             "createTransactionRequest": {
                 "merchantAuthentication": {
-                    "name": "8zw38TXp",
-                    "transactionKey": "29L3e238quN7yqQT"
+                    "name": "5KP3u95bQpv",
+                    "transactionKey": "346HZ32z3fP4hTG2"
                 },
                 "refId": "123456",
                 "transactionRequest": {
@@ -158,16 +165,16 @@ function makeTransaction () {
 DocumentController.prototype.handleEvent = function(event) {
     const target = event.target;
     var loadingDocument;
-    var str = target.getAttribute("type");
-    console.log(target+"hello"+str)
-    showPaymentForm();
-    if( str === 'creditCard'){
+    var str = target.getAttribute("id");
+    
+    if( str === 'WatchMeID'){
         launchPlayer()
 
     }
-    if( str === 'visaCheckout'){
-        makeTransaction();
+    else{
+        showPaymentForm();
     }
+    
     //launchPlayer()
     //makeTransaction();
   //  typeof Accept.dispatchData;
@@ -197,3 +204,6 @@ DocumentController.prototype.handleEvent = function(event) {
         navigationDocument.presentModal(alertDocument);
     }*/
 };
+
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
