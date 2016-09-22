@@ -6,7 +6,7 @@
              .upperLeftCard {  width: 400; height: 400; background-color: red;tv-align: left;tv-position: top-left; } 
       </style>
     </head>
-    <productTemplate>
+    <descriptiveAlertTemplate>
     <background>
          <img src="http://localhost:9001/resources/images/background/background.jpg" />
     </background>
@@ -14,11 +14,11 @@
      <row> 
       
       
-        <lockup>
+        <lockup type="creditCard">
 		      <img src="http://localhost:9001/resources/images/payment/payCreditCard.jpeg" width="300" height="200" />
 		    </lockup>
       
-        <lockup>
+        <lockup type="visaCheckout">
           <img src="http://localhost:9001/resources/images/payment/visaCheckout.png" width="300" height="200" />
         </lockup>
         <badge src="resource://mpaa-pg" class="badge" />
@@ -33,6 +33,6 @@
       </button>
         
    </row>		
-    </productTemplate>
+    </descriptiveAlertTemplate>
 </document>
 
