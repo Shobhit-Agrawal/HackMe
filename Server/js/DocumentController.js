@@ -120,7 +120,6 @@ function showResponse(xobj) {
 
 function makeTransaction () {
 
-  
 
     var json = {
             "createTransactionRequest": {
@@ -131,7 +130,7 @@ function makeTransaction () {
                 "refId": "123456",
                 "transactionRequest": {
                     "transactionType": "authCaptureTransaction",
-                    "amount": 16,
+                    "amount": 15,
                     "payment": {
                         "creditCard": {
                             "cardNumber": "4111111111111111",
@@ -204,3 +203,4 @@ DocumentController.prototype.handleEvent = function(event) {
     }*/
 };
 
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
