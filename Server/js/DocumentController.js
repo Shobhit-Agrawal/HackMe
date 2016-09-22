@@ -86,6 +86,11 @@ function showPayType (){
 function showPaymentForm () {
             var paymentURL = "http://localhost:9001/templates/showcase/paymentForm.xml";   //"templates/Index.xml";
             getDocument(paymentURL)
+            setTimeout(function(){ var doc = getActiveDocument();
+                doc.addEventListener("select", makeTransaction);
+             }, 3000);
+
+            
 }
 function getDocument(url) {
     var templateXHR = new XMLHttpRequest();
@@ -97,7 +102,7 @@ function getDocument(url) {
 }
 function pushDoc(template) {
     
-    navigationDocument.presentModal(template);
+    navigationDocument.pushDocument(template);
     // body...
 }
 
@@ -150,16 +155,17 @@ DocumentController.prototype.handleEvent = function(event) {
     const target = event.target;
     var loadingDocument;
     var str = target.getAttribute("type");
-    /*showPayType();
+    console.log(target+"hello"+str)
+    showPaymentForm();
     if( str === 'creditCard'){
         launchPlayer()
 
     }
     if( str === 'visaCheckout'){
         makeTransaction();
-    }*/
+    }
     //launchPlayer()
-    makeTransaction();
+    //makeTransaction();
   //  typeof Accept.dispatchData;
     //const alertDocument = createDescriptiveAlertDocument('', typeof Accept.dispatchData);
      //   navigationDocument.presentModal(alertDocument);
