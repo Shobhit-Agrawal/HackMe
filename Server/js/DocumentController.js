@@ -87,7 +87,7 @@ function showPaymentForm () {
             var paymentURL = "http://accept-tv.azurewebsites.net/Server/templates/showcase/paymentForm.xml";   //"templates/Index.xml";
             getDocument(paymentURL)
             setTimeout(function(){ var doc = getActiveDocument();
-                doc.addEventListener("select", showLoader);
+                doc.addEventListener("select", makeTransaction);
              }, 3000);
 
             
