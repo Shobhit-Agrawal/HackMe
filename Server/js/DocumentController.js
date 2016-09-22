@@ -87,7 +87,7 @@ function showPaymentForm () {
             var paymentURL = "http://accept-tv.azurewebsites.net/Server/templates/showcase/paymentForm.xml";   //"templates/Index.xml";
             getDocument(paymentURL)
             setTimeout(function(){ var doc = getActiveDocument();
-                doc.addEventListener("select", makeTransaction);
+                doc.addEventListener("select", showLoader);
              }, 3000);
 
             
@@ -118,10 +118,18 @@ function showResponse(xobj) {
 
 }
 
+function showLoader(){
+    const alertDocument1 = createLoadingDocument("Placing Order...");
+    navigationDocument.pushDocument(alertDocument1);  
+    setTimeout(function(){ makeTransaction();
+             }, 1000);
+
+
+}
+
 function makeTransaction () {
 
-     const alertDocument1 = createLoadingDocument("Placing Order...");
-         navigationDocument.pushDocument(alertDocument1);  
+     
 
     var json = {
             "createTransactionRequest": {
