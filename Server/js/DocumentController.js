@@ -108,7 +108,7 @@ function pushDoc(template) {
 
 
 function showResponse(xobj) {
-    navigationDocument.dismissModal();
+   
     var responseText = JSON.parse(xobj.responseText);
 
     const alertDocument = createDescriptiveAlertDocument('Order Placed. Thank you!', (responseText.transactionResponse.transId));
