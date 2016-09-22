@@ -77,7 +77,7 @@ DocumentController.prototype.handleMenu = function (event) {
 }
 
 function showPayType (){
-    var paymentURL = "http://localhost:9001/templates/showcase/paymentType.xml";   //"templates/Index.xml";
+    var paymentURL = "http://localhost:9001/templates/list/Catalog.xml";   //"templates/Index.xml";
            getDocument(paymentURL)
            
 
@@ -104,12 +104,12 @@ function pushDoc(template) {
 
 function showResponse(xobj) {
     var responseText = JSON.parse(xobj.responseText);
-    const alertDocument = createDescriptiveAlertDocument('Chandra Response:', JSON.stringify(responseText));
+    const alertDocument = createDescriptiveAlertDocument('Order Placed, Thanks a lot!! /n Your transaction ID is:', (responseText.transactionResponse.transId));
         navigationDocument.presentModal(alertDocument);
 
 }
 
-DocumentController.prototype.makeTransaction = function() {
+function makeTransaction () {
 
     var json = {
             "createTransactionRequest": {
@@ -149,9 +149,17 @@ DocumentController.prototype.makeTransaction = function() {
 DocumentController.prototype.handleEvent = function(event) {
     const target = event.target;
     var loadingDocument;
-    showPayType();
+    var str = target.getAttribute("type");
+    /*showPayType();
+    if( str === 'creditCard'){
+        launchPlayer()
+
+    }
+    if( str === 'visaCheckout'){
+        makeTransaction();
+    }*/
     //launchPlayer()
-    //makeTransaction();
+    makeTransaction();
   //  typeof Accept.dispatchData;
     //const alertDocument = createDescriptiveAlertDocument('', typeof Accept.dispatchData);
      //   navigationDocument.presentModal(alertDocument);
