@@ -140,7 +140,7 @@ function makeTransaction () {
                 "refId": "123456",
                 "transactionRequest": {
                     "transactionType": "authCaptureTransaction",
-                    "amount": 15,
+                    "amount": 16,
                     "payment": {
                         "creditCard": {
                             "cardNumber": "4111111111111111",
