@@ -109,7 +109,10 @@ function pushDoc(template) {
 
 function showResponse(xobj) {
     var responseText = JSON.parse(xobj.responseText);
+
     const alertDocument = createDescriptiveAlertDocument('Order Placed. Thank you!', (responseText.transactionResponse.transId));
+
+   
         navigationDocument.presentModal(alertDocument);
 
 }
@@ -158,16 +161,13 @@ function makeTransaction () {
 DocumentController.prototype.handleEvent = function(event) {
     const target = event.target;
     var loadingDocument;
-    var str = target.getAttribute("type");
-    console.log(target+"hello"+str)
+    var str = target.getAttribute("id");
     showPaymentForm();
-    if( str === 'creditCard'){
+    if( str === 'WatchMeID'){
         launchPlayer()
 
     }
-    if( str === 'visaCheckout'){
-        makeTransaction();
-    }
+    
     //launchPlayer()
     //makeTransaction();
   //  typeof Accept.dispatchData;

@@ -48,7 +48,7 @@ See LICENSE.txt for this sample’s licensing information
         </row>
         <description allowsZooming="true">Combining the non-stop movement and athletic endurance of soccer with the aerial passing skills of football, a game of ultimate is played by two teams with a flying disc on a field with end zones, similar to football.  Ultimate is played in more than 80 countries by an estimated 7 million of men and women, girls and boys.  The international governing body, WFDF, represents 59 member associations in 56 countries.</description>
         <row>
-          <buttonLockup>
+          <buttonLockup id="WatchMeID">
             <badge src="resource://button-preview" />
             <title>Watch Live</title>
           </buttonLockup>
