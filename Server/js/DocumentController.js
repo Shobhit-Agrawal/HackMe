@@ -108,32 +108,24 @@ function pushDoc(template) {
 
 
 function showResponse(xobj) {
-    navigationDocument.dismissModal();
     var responseText = JSON.parse(xobj.responseText);
-
     const alertDocument = createDescriptiveAlertDocument('Order Placed. Thank you!', (responseText.transactionResponse.transId));
-
-   
-        navigationDocument.replaceDocument(alertDocument);
+        navigationDocument.presentModal(alertDocument);
 
 }
 
-
-
 function makeTransaction () {
-
-     
 
     var json = {
             "createTransactionRequest": {
                 "merchantAuthentication": {
-                    "name": "5KP3u95bQpv",
-                    "transactionKey": "346HZ32z3fP4hTG2"
+                    "name": "8zw38TXp",
+                    "transactionKey": "29L3e238quN7yqQT"
                 },
                 "refId": "123456",
                 "transactionRequest": {
                     "transactionType": "authCaptureTransaction",
-                    "amount": 16,
+                    "amount": 15,
                     "payment": {
                         "creditCard": {
                             "cardNumber": "4111111111111111",
@@ -166,16 +158,16 @@ function makeTransaction () {
 DocumentController.prototype.handleEvent = function(event) {
     const target = event.target;
     var loadingDocument;
-    var str = target.getAttribute("id");
-    
-    if( str === 'WatchMeID'){
+    var str = target.getAttribute("type");
+    console.log(target+"hello"+str)
+    showPaymentForm();
+    if( str === 'creditCard'){
         launchPlayer()
 
     }
-    else{
-        showPaymentForm();
+    if( str === 'visaCheckout'){
+        makeTransaction();
     }
-    
     //launchPlayer()
     //makeTransaction();
   //  typeof Accept.dispatchData;
@@ -205,4 +197,3 @@ DocumentController.prototype.handleEvent = function(event) {
         navigationDocument.presentModal(alertDocument);
     }*/
 };
-
