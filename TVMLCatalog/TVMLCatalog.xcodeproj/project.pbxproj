@@ -89,6 +89,8 @@
 				TargetAttributes = {
 					65AE40781B8C3649006FB795 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 8WQ4DJVQC2;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -226,11 +228,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8WQ4DJVQC2;
 				INFOPLIST_FILE = TVMLCatalog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.TVMLCatalog";
+				PRODUCT_BUNDLE_IDENTIFIER = net.authorize;
 				PRODUCT_NAME = TVMLCatalog;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -241,11 +245,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8WQ4DJVQC2;
 				INFOPLIST_FILE = TVMLCatalog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.TVMLCatalog";
+				PRODUCT_BUNDLE_IDENTIFIER = net.authorize;
 				PRODUCT_NAME = TVMLCatalog;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
