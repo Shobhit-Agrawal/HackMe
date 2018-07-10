@@ -1,0 +1,34 @@
+<div class="row compactInvoiceList"  ng-class-odd="'even'">
+    <div class="col-xs-12 lineitemrow">
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="graylabel">Invoice Date</div>
+                {{t.invoiceDate}}
+                <a style="cursor:pointer" ng-click="editLineItem($index)">{{item.itemName}}</a>
+            </div>
+            <div class="col-xs-4">
+                <div class="graylabel">Description</div>
+                {{item.description}}
+            </div>
+            <div class="col-xs-4">                    
+                <span style="color:transparent;">{{item.unitPrice * item.quantity | currency:"$"}}</span>
+                <div class="totalamount">
+                    {{item.unitPrice * item.quantity | currency:"$"}}
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="graylabel">Quantity</div>
+                {{item.quantity}}
+            </div>
+            <div class="col-xs-4">
+                <div class="graylabel">Unit Price</div>
+                {{item.unitPrice | currency:"$"}}
+            </div>
+            <div class="col-xs-4">
+            </div>
+        </div>
+    </div>
+</div>

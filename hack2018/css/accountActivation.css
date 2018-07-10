@@ -1,0 +1,58 @@
+
+body{
+	font-size: 12px;
+
+}
+.wrapper{
+	color: black;
+	padding :60px 60px ;
+}
+
+header{
+	width: 100%;
+	height: 100px;
+	background-color: #2E5C82;
+	color: white;
+	font-size: 3em;
+	position: Relative;
+}
+footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:#D8DAD9;
+   color: white;
+   display: block;
+}
+div.termPrivacy{
+	padding-top: 10px;
+	text-align: center;
+}
+div.legal{
+	margin-top: 5px;
+	text-align: center;
+
+}
+div.termPrivacy :first-child{
+	padding-right: 15px;
+}
+#headerTitleID{
+	vertical-align: middle;
+	padding-top: 25px;
+	padding-left: 25px;
+}
+#pageheadingID{
+	font-size: 3.5em;
+	height: 60px;
+	border-bottom: 1px solid gray;
+	
+}
+#pageSubheadingID{
+	margin-top: 20px;
+	font-size: 2em;
+}
+#headingInfoID{
+	margin-top: 10px;
+	font-size: 1.2em;
+}

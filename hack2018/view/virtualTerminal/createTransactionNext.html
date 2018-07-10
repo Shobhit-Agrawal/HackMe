@@ -1,0 +1,187 @@
+<div  class="">
+
+<div class="panel"> <!-- adding "panel-default" puts the border back on, I took it off -->
+  <div class="panel-heading bg-custom">
+  	<h3 class="panel-title">Create Transaction</h3>
+  </div>
+  <div class="panel-body">
+
+	<div id="formPart1" class="" ng-show="currentTab == 1">
+		<div><h4 class="createTransFormTitle">Payment Information</h4></div>
+		<form name="createTransaction1" id="createTransaction1" class="form-horizontal" role="form">
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			<div class="form-group" style="height: 35px;" class="ccvalidinputrow">
+				<label for="cardNumberID" class="hidden-xs col-sm-3 control-label">Card Number</label>
+				<div class="col-sm-9" style="height: 35px;" class="ccvalidinputrow">
+					<input class="form-control" name="cardNumber" id="cardNumber" placeholder="Card Number" ng-model="cardDetails.cardNumber" data-ng-pattern="/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\d{3})\d{11})$/">
+					<div validationdir currelementvalue="cardDetails.cardNumber" currelement="createTransaction1.cardNumber" inputtype="'ccnum'" isreq="true"></div>
+					<span class="showInInput" ccissuernameget currelementvalue="cardDetails.cardNumber" currelement="createTransaction1.cardNumber"></span>
+				</div>
+			</div>
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			<div class="form-group">
+				<label for="expDateID" class="hidden-xs col-sm-3 control-label">Exp. Date</label>
+				<div class="col-sm-9">
+					<input id="ctdatepicker" class="form-control" type="text" name="expDate" id="expDate" placeholder="Expiration Date" ng-model="cardDetails.expDate" >
+					<div validationdir currelementvalue="" currelement="createTransaction1.expDate" inputtype="'number'" isreq="true"></div>
+				</div>
+			</div>
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			<div class="form-group">
+				<label for="amount" class="hidden-xs col-sm-3 control-label">Amount</label>
+				<div class="col-sm-9">
+					<input  class="form-control" name="amount" id="amount" placeholder="Amount" ng-model="cardDetails.amount" 
+					data-ng-pattern="/^[0-9]+$/">
+					<div validationdir currelementvalue="cardDetails.amount" currelement="createTransaction1.amount" inputtype="'amount'" isreq="true" required></div>
+				</div>
+			</div>
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			<div class="form-group">
+				<label for="cardCode" class="hidden-xs col-sm-3 control-label">Card Code</label>
+				<div class="col-sm-9">
+					<input class="form-control" name="cardcode" id="cardcode" placeholder="Card Code" ng-model="cardDetails.cardCode" data-ng-pattern="/^[0-5]+$/">
+					<div validationdir currelementvalue="" currelement="createTransaction1.cardcode" inputtype="'ccv'" isreq="true" required></div>
+				</div>
+			</div>
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			<div class="form-group">
+				<label for="invoice" class="hidden-xs col-sm-3 control-label">Invoice #</label>
+				<div class="col-sm-9">
+					<input class="form-control" type="invoice" name="invoice" id="invoice" placeholder="Invoice ID" ng-model="billingInfo.invoiceId" >
+					<div validationdir currelementvalue="" currelement="createTransaction1.invoiceId" inputtype="'text'" isreq="true" required></div>
+				</div>
+			</div>
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			<div class="form-group">
+				<label for="description" class="hidden-xs col-sm-3 control-label">Description</label>
+				<div class="col-sm-9">
+					<input class="form-control" type="text" id="description" id="description" placeholder="Description" ng-model="billingInfo.description" >
+					<div validationdir currelementvalue="" currelement="createTransaction1.description" inputtype="'text'" isreq="true" required></div>
+				</div>
+			</div>
+
+		</form>
+	</div>
+
+	<div id="formPart2" class="" ng-show="currentTab == 2">
+		<div><h4 class="createTransFormTitle">Customer Billing Information</h4></div>
+		<form name="createTransaction2" class="form-horizontal" role="form">
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			<div class="form-group">
+				<label for="customerid" class="hidden-xs col-sm-3 control-label">Customer Id</label>
+				<div class="col-sm-9">
+					<input class="form-control" type="text" name="customerid" id="customerid" placeholder="Customer Id" ng-model="billingInfo.customerid" >
+					<div validationdir currelementvalue="" currelement="createTransaction2.customerid" inputtype="'text'" isreq="true" required></div>
+				</div>
+			</div>
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			<div class="form-group">
+				<label for="firstname" class="hidden-xs col-sm-3 control-label">First Name</label>
+				<div class="col-sm-9">
+					<input class="form-control" type="text" name="firstname" id="firstname" placeholder="First Name" ng-model="billingInfo.firstName" >
+					<div validationdir currelementvalue="" currelement="createTransaction2.firstname" inputtype="'text'" isreq="true" required></div>
+				</div>
+			</div>
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			<div class="form-group">
+				<label for="lastname" class="hidden-xs col-sm-3 control-label">Last Name</label>
+				<div class="col-sm-9">
+					<input class="form-control" type="text" name="lastname" id="lastname" placeholder="Last Name" ng-model="billingInfo.lastName" >
+					<div validationdir currelementvalue="" currelement="createTransaction2.lastname" inputtype="'text'" isreq="true" required></div>
+				</div>
+			</div>
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			<div class="form-group">
+				<label for="company" class="hidden-xs col-sm-3 control-label">Company</label>
+				<div class="col-sm-9">
+					<input class="form-control" type="text" name="company" id="company" placeholder="Company" ng-model="billingInfo.company" >
+					<div validationdir currelementvalue="" currelement="createTransaction2.company" inputtype="'text'" isreq="true" required></div>
+				</div>
+			</div>
+				<!-- ADDRESS DIRECTIVE -->
+				<div addressform   mycurrmodel="billingInfo"  currform="createTransaction2"></div>
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			<div class="form-group">
+				<label for="fax" class="hidden-xs col-sm-3 control-label">Fax</label>
+				<div class="col-sm-9">
+					<input class="form-control" type="text" name="fax" id="fax" placeholder="fax" ng-model="billingInfo.fax">
+					<div validationdir currelementvalue="" currelement="createTransaction2.fax" inputtype="'text'" isreq="true" required></div>
+				</div>
+			</div>
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			<div class="form-group">
+				<label for="email" class="hidden-xs col-sm-3 control-label">Email</label>
+				<div class="col-sm-9">
+					<input class="form-control" type="email" name="email" id="email" placeholder="Email" ng-model="billingInfo.email" >
+					<div validationdir currelementvalue="" currelement="createTransaction2.email" inputtype="'email'" isreq="true" required></div>
+				</div>
+			</div>
+
+
+		</form>
+	</div>
+
+
+	<div id="formPart3" class="" ng-show="currentTab == 3">
+		<div><h4 class="createTransFormTitle">Shipping Information</h4></div>
+		<form name="createTransaction3" class="form-horizontal" role="form">
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			
+			 <div class="form-group">
+				<label for="sameAsBillingChkID" class="col-sm-3 col-xs-9 control-label">Same As Billing</label>
+				<div class="col-sm-9 col-xs-3"><input type="checkbox" ng-model="isSameAsBilling" ng-click="setShippingAsBilling(isSameAsBilling)"  id="sameAsBillingChkID"/>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="firstName" class="hidden-xs col-sm-3 control-label">First Name</label>
+				<div class="col-sm-9">
+					<input class="form-control" type="text" name="firstName" id="firstName" placeholder="First Name" ng-model="shippingInfo.firstName" >
+					<div validationdir currelementvalue="" currelement="createTransaction3.firstName" inputtype="'text'" isreq="true" required></div>
+				</div>
+			</div>
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			<div class="form-group">
+				<label for="lastName" class="hidden-xs col-sm-3 control-label">Last Name</label>
+				<div class="col-sm-9">
+					<input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name" ng-model="shippingInfo.lastName" >
+					<div validationdir currelementvalue="" currelement="createTransaction3.lastName" inputtype="'text'" isreq="true" required></div>
+				</div>
+			</div>
+			<!-- ///////////////////////////////////////////////////////////////////////// -->
+			<div class="form-group">
+				<label for="comapny" class="hidden-xs col-sm-3 control-label">Comapny</label>
+				<div class="col-sm-9">
+					<input class="form-control" type="text" name="comapny" id="comapny" placeholder="Company" ng-model="shippingInfo.company" >
+					<div validationdir currelementvalue="" currelement="createTransaction3.company" inputtype="'text'" isreq="true" required></div>
+				</div>
+			</div>
+				<!-- ADDRESS DIRECTIVE -->
+				<div addressform   mycurrmodel="shippingInfo" currform="createTransaction3"></div>
+
+				<infomodal mxessage="'The transaction was successfully created!'"></infomodal>
+
+		</form>
+	</div>
+
+
+
+	<nav class="navbar navbar-default" role="navigation">
+		<div modaldirective ></div>
+		<div class="text-right " style="margin-top:7px;margin-right: 64px;">
+			<div class="fakeData" ng-click="fakeData()"></div>
+			<button type="button" id="btnPrev"  class="btn btn-custom" ng-click="currentTab=currentTab-1" ng-disabled="currentTab===1">
+				PREV
+			</button>
+
+			<button type="button" id="btnNext"  class="btn btn-custom" ng-click="currentTab=currentTab+1" ng-hide="currentTab===3">
+				NEXT
+			</button>
+
+			<button id="createTransactionSubmit"  class="btn btn-custom" data-toggle="modal" ng-click="modalmethod('Submit transaction?');" data-target="#myModal" ng-show="currentTab===3">
+			  SUBMIT
+			</button>
+		</div>
+	</nav>	
+
+</div>

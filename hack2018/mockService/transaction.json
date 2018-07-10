@@ -1,0 +1,65 @@
+{
+  "transactions": [
+    {
+        "transactionID":"trans1",
+        "paymentDate":"Mar 20, 2014",
+        "transactionState":"Sattled",
+        "Customer":"Niel",
+        "CardType":"visa",
+        "paymentMethod":"2244 2365 3652 4587 5896",
+        "paymentAmount":"400.00",
+        "sattlementDate":"Mar 22, 2014",
+        "businessDay":"Mar 25, 2014",
+        "addressVerificationStatus":"Street Address: Match Zip: Matched first 5 digits (Y)",
+        "cardCodeStatus":"Not Applicable",
+        "exp":"March 22,2015"
+        
+    },
+    {
+        "transactionID":"trans2",
+        "paymentDate":"Mar 22, 2014",
+        "transactionState":"Sattled",
+        "Customer":"Mike",
+        "CardType":"visa",
+        "paymentMethod":"2244 2365 3652 4587 5896",
+        "paymentAmount":"300.00",
+        "sattlementDate":"Mar 22, 2014",
+        "businessDay":"Mar 25, 2014",
+        "addressVerificationStatus":"Street Address: Match Zip: Matched first 5 digits (Y)",
+        "cardCodeStatus":"Not Applicable",
+        "exp":"March 22,2015"
+        
+    },
+    {
+        "transactionID":"trans3",
+        "paymentDate":"Mar 25, 2014",
+        "transactionState":"Sattled",
+        "Customer":"Brian",
+        "CardType":"visa",
+        "paymentMethod":"2244 2365 3652 4587 5896",
+        "paymentAmount":"200.00",
+        "sattlementDate":"Mar 22, 2014",
+        "businessDay":"Mar 25, 2014",
+        "addressVerificationStatus":"Street Address: Match Zip: Matched first 5 digits (Y)",
+        "cardCodeStatus":"Not Applicable",
+        "exp":"March 22,2015"
+        
+    },
+    {
+        "transactionID":"trans4",
+        "paymentDate":"Mar 23, 2014",
+        "transactionState":"Sattled",
+        "Customer":"Avinash",
+        "CardType":"visa",
+        "paymentMethod":"2244 2365 3652 4587 5896",
+        "paymentAmount":"100.00",
+        "sattlementDate":"Mar 22, 2014",
+        "businessDay":"Mar 25, 2014",
+        "addressVerificationStatus":"Street Address: Match Zip: Matched first 5 digits (Y)",
+        "cardCodeStatus":"Not Applicable",
+        "exp":"March 22,2015"
+        
+    }
+  ]
+ 
+}

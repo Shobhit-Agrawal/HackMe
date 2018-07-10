@@ -1,0 +1,22 @@
+<accordion-group is-open="group2Open">
+    <!--  -->
+    <accordion-heading>
+        <!--ng-init="group2Open=true;"  -->
+        Invoices <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': group2Open, 'glyphicon-chevron-right': !group2Open}"></i>
+    </accordion-heading>
+    <ul class="nav">
+        <li><a ui-sref="invoice.dashboard" ng-click="toggleMenu()">Dash Board</a>
+        </li>
+        <li><a ui-sref="invoice.CreateInvoices" ng-click="toggleMenu()">Create Invoices</a>
+        </li>
+        <!--  <li><a ui-sref="invoice.CreateInvoices2"  ng-click="toggleMenu()">Create Invoices 2</a></li> -->
+        <li><a ui-sref="invoice.SearchInvoices" ng-click="toggleMenu()">Search Invoices</a>
+        </li>
+        <!--  <li><a  ui-sref="invoice.Details" ng-click="toggleMenu()">Invoices Details</a></li> -->
+        <li><a ui-sref="invoice.Settings" ng-click="toggleMenu()">Settings</a>
+        </li>
+<!-- <li><a ui-sref="invoice.ItemManager" ng-click="toggleMenu()">Item Manager</a>
+ -->
+        </li>
+    </ul>
+</accordion-group>

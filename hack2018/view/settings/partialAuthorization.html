@@ -1,0 +1,52 @@
+<div id="ctl00_MainContent_pnlMain">
+	
+        <table width="100%">
+            <tbody><tr>
+                <td colspan="3">
+                    <div id="PageHeader">
+                        <div id="Title">
+                            Partial Authorization
+                        </div>
+                        <div id="Help">
+                            <a href="#" onclick="javascript:openHelp(2);">Help </a>
+                        </div>
+                        <div class="Line">
+                            <hr>
+                        </div>
+                    </div>
+                    <p class="Padded">
+                        Select this option if you are ready to submit partial authorizations. A partial authorization transaction is one in which 
+                        two or more transactions are used to cover the total amount of the order. For example, a customer might present a gift 
+                        card whose value does not cover the entire cost of a purchase. <br>
+                        <br>
+                        MasterCard and Discover require support for partial authorizations, authorization reversals, and balance response for 
+                        prepaid cards (such as debit or gift cards). This includes MasterCard, Discover, JCB, and Diners card programs in the 
+                        U.S.<br>
+                        <br>
+                        Before you can activate partial authorizations, you need to make sure your web site is set up to handle this type of 
+                        transaction. For more information about setting up your web site to handle partial authorizations, see the documentation 
+                        at the <a href="http://developer.authorize.net">Developer Center</a><br>
+                        <br>
+                        If you turn off this option and you submit an authorization request for a prepaid card whose available balance is less 
+                        than the total purchase amount, the transaction will be declined due to lack of funds.<br>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input id="ctl00_MainContent_cbMerchantConfig" type="checkbox" name="ctl00$MainContent$cbMerchantConfig"><label for="ctl00_MainContent_cbMerchantConfig">Allow Partial Payments</label>
+                    <br>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="ctl00$MainContent$btnSubmit" value="Submit" onclick="return submitConfirm();" id="ctl00_MainContent_btnSubmit">
+                </td>
+            </tr>
+        </tbody></table>
+    
+</div>

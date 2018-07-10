@@ -1,0 +1,49 @@
+{
+    "invoices": [
+        {
+            "uniqueId": "00100001",
+            "invoiceID": "000440001",
+            "invoiceDate": "05/07/2014",
+            "dueDate": "06/07/2014",
+            "status": "unpaid",
+            "amount": "100.00",
+            "customerEmail": "xyz@abc.com"
+        },
+        {
+            "uniqueId": "00100002",
+            "invoiceID": "000440002",
+            "invoiceDate": "05/07/2014",
+            "dueDate": "06/07/2014",
+            "status": "unpaid",
+            "amount": "200.00",
+            "customerEmail": "xyz@abc.com"
+        },
+        {
+            "uniqueId": "00100003",
+            "invoiceID": "000440003",
+            "invoiceDate": "05/07/2014",
+            "dueDate": "06/07/2014",
+            "status": "unpaid",
+            "amount": "300.00",
+            "customerEmail": "xyz@abc.com"
+        },
+        {
+            "uniqueId": "00100004",
+            "invoiceID": "000440004",
+            "invoiceDate": "05/07/2014",
+            "dueDate": "06/07/2014",
+            "status": "unpaid",
+            "amount": "400.00",
+            "customerEmail": "xyz@abc.com"
+        },
+        {
+            "uniqueId": "00100005",
+            "invoiceID": "000440005",
+            "invoiceDate": "05/07/2014",
+            "dueDate": "06/07/2014",
+            "status": "unpaid",
+            "amount": "500.00",
+            "customerEmail": "xyz@abc.com"
+        }
+    ]
+}

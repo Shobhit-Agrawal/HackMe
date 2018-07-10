@@ -1,0 +1,45 @@
+{
+    "uniqueId": "00100001",
+    "invoiceID": "000440001",
+    "invoiceDate": "05/07/2014",
+    "dueDate": "06/07/2014",
+    "status": "unpaid",
+    "email": "xyz@abc.com",
+    "phone": "666-666-6666",
+    "firstName": "Mike",
+    "businessName": "Mike Pizza",
+    "address1": "",
+    "address2": "",
+    "state": "WA",
+    "country": "United States",
+    "zip": "98011",
+    "paymentTerms": "Due on Receipt",
+    "taxRule": "unpaid",
+    "taxAmount": "20.00",
+    "totalAmount": "200.00",
+    "invoiceItems": [
+        {
+            "itemID": "00100001",
+            "description": "blah blah blah..",
+            "quantity": "2",
+            "unitPrice": "5", 
+            "total": "10"
+        },
+        {
+            "itemID": "00100002",
+            "description": "blah blah blah..",
+            "quantity": "3",
+            "unitPrice": "5", 
+            "total": "15"
+        },
+        {
+            "itemID": "00100003",
+            "description": "blah blah blah..",
+            "quantity": "4",
+            "unitPrice": "5", 
+            "total": "20"
+        }
+    ],
+    "note": "This is a note to the receipent",
+    "termsCondetions": "Pay with in 15 days."
+}

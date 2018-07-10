@@ -1,0 +1,231 @@
+
+<div  id="searchTransMainDiv">
+	<div class="panel panel-custom">
+		<div class="panel-heading bg-custom">
+			<h3 class="panel-title">Create Invoice</h3>
+		</div>
+		<div class="panel-body">
+
+
+
+
+<style>
+.row {
+margin-right: 0;
+margin-left: 0;
+}
+fieldset {
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #aaa;
+border-left: 1px solid #aaa;
+border-right: 1px solid #aaa;
+margin-right: 16px;
+margin-left: 16px;
+border-radius: 4px;
+margin-bottom: 12px;
+}
+legend {
+width: auto;
+margin-bottom: 6px;
+border-bottom: 0;
+margin-left: 14px;
+font-size: 15px;
+font-weight: bold;
+}
+
+.lineItemRow{
+	background-color:#f8f8f8;
+
+}
+</style>
+
+
+
+
+
+			<div class="row">
+				<div class="col-sm-6">
+					  <div class="form-group">
+					    <label class="hidden-xs" for="email">Recipient</label>
+					    <select class="form-control">
+					    	<option>rbaker@gmail.com</option>
+					    	<option>lartners@yahoo.com</option>
+					    	<option>thewelly@altavista.com</option>
+					    	<option>mcgalley@hotmail.com</option>
+
+					    </select>
+					  </div>				
+				</div>
+				<div class="col-sm-6">
+					  <div class="form-group">
+					    <label class="hidden-xs" for="invoiceNumber">Due Date</label>
+					    <input type="date" class="form-control" value="2014-05-22">
+					  </div>				
+				</div>
+			</div>
+
+
+		<fieldset>
+	    <legend>Line Items:</legend>
+			<div class="row">
+				<div class="col-sm-1">
+					
+				</div>
+				<div class="col-sm-7">
+					<label class="hidden-xs">
+						ITEM
+					</label>			
+				</div>
+				<div class="col-sm-4">
+					<label class="hidden-xs">
+						QUANTITY
+					</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-1">
+					<label>
+						1)
+					</label>
+				</div>
+				<div class="col-sm-7">
+					  <div class="form-group">
+					    <select class="form-control">
+					    	<option>Rose ($19.99/dz)</option>
+					    	<option>Tulip ($14.99/dz)</option>
+					    	<option>Lily ($12.49/dz)</option>
+					    	<option>Orchid ($22.75/dz)</option>
+					    </select>
+
+					  </div>				
+				</div>
+				<div class="col-sm-4">
+					    <select class="form-control">
+					    	<option>1 dozen</option>
+					    	<option>2 dozen</option>
+					    	<option>3 dozen</option>
+					    	<option>4 dozen</option>
+					    </select>			
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-1">
+					
+				</div>
+				<div class="col-sm-7">
+					<label class="hidden-xs">
+						ITEM
+					</label>			
+				</div>
+				<div class="col-sm-4">
+					<label class="hidden-xs">
+						QUANTITY
+					</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-1">
+					<label>
+						2)
+					</label>
+				</div>
+				<div class="col-sm-7">
+					  <div class="form-group">
+					    <select class="form-control">
+					    	<option>Rose ($19.99/dz)</option>
+					    	<option>Tulip ($14.99/dz)</option>
+					    	<option>Lily ($12.49/dz)</option>
+					    	<option>Orchid ($22.75/dz)</option>
+					    </select>
+
+					  </div>				
+				</div>
+				<div class="col-sm-4">
+					    <select class="form-control">
+					    	<option>1 dozen</option>
+					    	<option>2 dozen</option>
+					    	<option>3 dozen</option>
+					    	<option>4 dozen</option>
+					    </select>			
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-8">
+				</div>
+				<div class="col-sm-4">
+					<label style="font-size:29px;">
+						$154.97					
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<button type="button" class="btn btn-custom" ng-click="searchBtnHandler()">Add Line Item</button>
+					<br><br>
+				</div>
+				<div class="col-sm-8">
+				</div>
+			</div>
+	</fieldset>
+
+
+
+
+
+			<div class="row">
+				<div class="col-sm-12">
+					<nav class="navbar navbar-default" role="navigation">
+						<div class="text-center " style="margin-top:7px;">
+							<button type="button" class="btn btn-custom" ng-click="searchBtnHandler()">Preview</button>
+							<button type="button" class="btn btn-custom" ng-click="searchBtnHandler()">Save as Draft</button>
+							<button type="button" class="btn btn-custom" ng-click="searchBtnHandler()">Send by Email</button>
+						</div>
+					</nav>
+				</div>
+			</div>
+
+<style>
+#lineItemTable{display:none;}
+</style>
+
+
+
+
+<style>
+#itemdropdown {
+background-color: lightgray;
+width: 155px;
+height: 81px;
+overflow-x: hidden;
+overflow-y: scroll;
+}
+</style>
+
+
+<!-- 
+<input type="text" ng-keyup="filterList($event)" ng-model="itemInput">
+{{dropdownList}}
+<div id="itemdropdown">
+	<div id="" ng-repeat="li in dropdownList">
+			<div>{{li}}</div>
+	</div>
+</div>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+</div>

@@ -1,0 +1,38 @@
+<div  id="searchTransMainDiv">
+	<div class="panel panel-custom">
+		<div class="panel-heading bg-custom">
+			<h3 class="panel-title" ng-class="varcolr">Search Transactions</h3>
+		</div>
+
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-sm-4 searchtransrow">
+					<input id="startdate" type="text" placeholder="rangeStart" ng-model="startDate" class="form-control mydate" ></input>
+				</div>
+
+				<div class="col-sm-4 searchtransrow">
+					<input id="enddate"  type="text" placeholder="rangeEnd" ng-model="endDate" class="form-control mydate" ></input>
+				</div>
+
+				<div class="col-sm-4 searchtransrow">
+					<select    class="form-control" id="transactionType" ng-model="transactionType">
+						<option selected>Settled</option>
+						<option>Unsettled</option>
+					</select>
+				</div>
+
+		
+
+			</div>
+			<div class="searchtransrow">
+				<button type="button" class="btn btn-custom btn-block" id="searchTransButton" ng-click="searchBtnHandler()">Search</button>
+			</div>
+			<div class="row" style="margin-top:5px">
+				<div class="col-sm-12">
+					<div class="gridStyle" ng-grid="gridData" ng-show="displayGrid"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

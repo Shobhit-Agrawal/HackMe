@@ -1,0 +1,120 @@
+
+<div  id="searchTransMainDiv">
+	<div class="panel panel-custom">
+		<div class="panel-heading bg-custom">
+			<h3 class="panel-title">Invoice Settings</h3>
+		</div>
+		<div class="panel-body">
+
+
+			<div class="row">
+				<div class="col-sm-6">
+					  <div class="form-group">
+					    <label class="hidden-xs" for="businessName">Business Name</label>
+					    <input type="text" class="form-control" id="businessName" name="businessName" 
+					    placeholder="Business Name" ng-model="invoiceSettings.businessName">
+					  </div>				
+				</div>
+				<div class="col-sm-6">
+					  <div class="form-group">
+					    <label class="hidden-xs" for="address">Address</label>
+					    <input type="text" class="form-control" id="address" name="address" 
+					    placeholder="Address" ng-model="invoiceSettings.address">
+					  </div>				
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					  <div class="form-group">
+					    <label class="hidden-xs" for="firstName">First Name</label>
+					    <input type="text" class="form-control" id="firstName" name="firstName" 
+					    placeholder="First Name" ng-model="invoiceSettings.firstName">
+					  </div>				
+				</div>
+				<div class="col-sm-6">
+					  <div class="form-group">
+					    <label class="hidden-xs" for="phone">Phone</label>
+					    <input type="text" class="form-control" id="phone" name="phone" 
+					    placeholder="Phone" ng-model="invoiceSettings.phone">
+					  </div>				
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					  <div class="form-group">
+					    <label class="hidden-xs" for="lastName">Last Name</label>
+					    <input type="text" class="form-control" id="lastName" name="lastName" 
+					    placeholder="Last Name" ng-model="invoiceSettings.lastName">
+					  </div>				
+				</div>
+				<div class="col-sm-6">
+					  <div class="form-group">
+					    <label class="hidden-xs" for="email">Email</label>
+					    <input type="text" class="form-control" id="email" name="email" 
+					    placeholder="Email" ng-model="invoiceSettings.email">
+					  </div>				
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					  <div class="form-group">
+					    <label class="hidden-xs" for="website">Website</label>
+					    <input type="text" class="form-control" id="website" name="website" 
+					    placeholder="Website" ng-model="invoiceSettings.website">
+					  </div>				
+				</div>
+				<div class="col-sm-6">
+					  <div class="form-group">
+					    <label class="hidden-xs" for="fax">Fax</label>
+					    <input type="text" class="form-control" id="fax" name="fax" 
+					    placeholder="Fax" ng-model="invoiceSettings.fax">
+					  </div>				
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<label class="hidden-xs" for="filePath">Logo</label>
+					<div class="form-group">
+						<img style="max-height: 150px;" id="blah" src="../app/assets/img/logo3.png" alt="your image" />
+					</div>
+				</div>
+				<div class="col-sm-6">
+					  <div class="form-group">
+					  	<!-- the reason this is not angular is I cannot find an ng-event for a file input change -->   
+					  	<input type='file' onchange="readURL(this)" data-ng-change="fileInputEvent()">
+					  </div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-9">
+					  <div class="form-group">
+					    <label class="hidden-xs" for="lastName">Items</label>
+					    <select class="form-control" ng-model="invoiceSettings.lastName">
+					    	<option>Door Hinge</option>
+					    	<option>Dead Bolt</option>
+					    	<option>Knocker</option>
+					    </select>
+					  </div>				
+				</div>
+				<div class="col-sm-3">
+				
+					<a ui-sref="invoice.ItemManager" ng-click="toggleMenu()" href="#/invoice.ItemManager" style="margin-top: 24px;display: block;">Add An Item</a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+function readURL(input) {
+	if (input.files && input.files[0]) {
+		var reader = new FileReader();
+		reader.onload = function (e) {
+			$('#blah').attr('src', e.target.result)
+		};
+		reader.readAsDataURL(input.files[0]);
+		}
+}
+</script>

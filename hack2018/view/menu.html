@@ -1,0 +1,52 @@
+<div ng-controller="menuController">
+<accordion close-others="true"  class="menuController" id="menuController" ng-hide="isSubMenu">
+        
+        <ul class="nav panel-collapse" id="menusignout">
+          <li>
+            <div class="fa fa-user menuicon"></div>
+              <a ng-click="logout()">Sign Out</a>
+          </li>
+        </ul> 
+    <accordion-group  is-open="group1Open" ng-init="group1Open=true;">
+
+        <accordion-heading>
+            Transaction <i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': group1Open, 'glyphicon-chevron-right': !group1Open}"></i>
+        </accordion-heading>
+
+        <ul class="nav" ng-mouseleave="toggleIconColor(4);">
+
+        <li>
+          <div class="fa fa-th-list menuicon" ng-class="currentPageMenuIcon[0]"></div>
+          <a  ui-sref="dashboard.transactionType"  ng-click="toggleMenu(); togglePageHeader(0);" >Dashboard</a>
+        </li>
+
+        <li>
+          <div class="fa fa-university menuicon" ng-class="currentPageMenuIcon[1]"></div>
+          <a   ng-click="toggleMenu(); togglePageHeader(1);paymentHandler();">{{paymentLabel}}</a>
+        </li>
+
+        <li>
+          <div class="fa fa-retweet menuicon" ng-class="currentPageMenuIcon[2]"></div>
+          <a  ui-sref="searchTransaction" ng-click="toggleMenu(); togglePageHeader(2);" >Search Transaction</a>
+        </li>
+
+        <li>
+          <div class="fa fa-cog menuicon" ng-class="currentPageMenuIcon[3]"></div>
+          <a  ui-sref="mintSettings"  ng-click="toggleMenu(); togglePageHeader(3);" >Merchant Settings</a>
+        </li>
+
+        <li class="hidden-md hidden-lg hidden-sm">
+          <div class="fa fa-sign-out menuicon" ng-class="currentPageMenuIcon[-1]"></div>
+          <a   ng-click="logout()">Sign Out</a>
+        </li>
+
+        </ul> 
+    </accordion-group>
+
+
+  <!-- <div ng-include="'invoices/view/menu.html'"></div> -->
+    
+</accordion>
+
+
+</div>

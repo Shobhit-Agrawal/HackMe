@@ -1,0 +1,39 @@
+
+<div class="compactTransListRow"  id="invoicelist" ng-repeat="t in invoices" ng-class-even="'even'" ng-click="showInvoiceDetails(t.invoiceID)">
+	<div class="row">
+		<div class="col-xs-4">
+			  <div class="form-group">
+			    <div class="graylabel">Invoice Date</div>
+			    {{t.invoiceDate}}
+			  </div>				
+		</div>
+		<div class="col-xs-4">
+			  <div class="form-group">
+			    <div class="graylabel">Invoice ID</div>
+			    {{t.invoiceID}}
+			  </div>				
+		</div>
+		<div class="col-xs-4 totalamount">
+			  <div class="form-group">
+			    <div>{{t.amount}}</div>
+			  </div>				
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4">
+			  <div class="form-group">
+			    <div class="graylabel">Due Date</div>
+			    {{t.dueDate}}
+			  </div>				
+		</div>
+		<div class="col-xs-4">
+			  <div class="form-group">
+			    <div class="graylabel">Status</div>
+			    {{t.status}}
+			  </div>				
+		</div>
+		<div class="col-xs-4">
+				
+		</div>
+	</div>
+</div>

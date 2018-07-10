@@ -1,0 +1,29 @@
+<div class="col-xs-12" id="cardSwipeID" ng-controller="cardSwipeController">
+    <div id="successMsgID">
+        <p  id="successMsg"class="alert alert-success" style="font-size:14px">Thanks for the payment!! Your transaction ID is :</p><br>
+        <b>Ready for Next Transaction:</b> 
+    </div>
+    <div class="row" style="margin-top:50px;" id="swipeCardPanelID">
+        <div class="col-xs-6">
+            <input type="text" placeholder="Amount to be paid in $." ng-model="payAmount" name="payAmountName" class="form-control col-xs-12 " />
+        </div>
+
+        <div class="col-xs-6">
+            <button type="button" ng-click="startCardReader(payAmount);" class="" ng-class="swipeBtnCls" id="swipeCardBtnID">Swipe Card</button>
+        </div>
+    </div>
+    <div class="row" style="margin-top:5px;" id="authorizePaymentPanelID">
+
+        <div class="col-xs-12">
+            <label>E-Signature Required :</label>
+        </div>
+        <div class="col-xs-6">
+            <input type="text" placeholder="Type your name here." ng-model="eSign" class="form-control col-xs-12 " />
+        </div>
+
+        <div class="col-xs-6">
+            <button type="button" ng-click="executeTransaction(payAmount,eSign);" class="form-control btn col-xs-12 btn btn-custom">Authorize Payment</button>
+        </div>
+    </div>
+   
+</div>

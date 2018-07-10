@@ -1,0 +1,131 @@
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* collapsed sidebar styles */
+@media screen and (max-width: 767px) {
+
+.row-offcanvas {
+  position: relative;
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+
+.mainpageheading {
+  margin: 0 -20px 0 -10px;
+}
+
+#menusignout {
+  display: inline;
+}
+
+#bubblenametable {
+  display: none;
+}
+
+.row-offcanvas-right {
+  right: 5px;
+  .sidebar-offcanvas {
+    right: -76%;
+    /* 6 columns */
+  }
+  &.active {
+    right: 75%;
+    /* 6 columns */
+    padding-right: 5px;
+  }
+}
+
+.sidebar-offcanvas {
+  position: absolute;
+  top: 0;
+  width: 75%;
+  /* 6 columns */
+}
+#sidebar li {
+  border-bottom: 0;
+  border-top-width: 2px;
+  border-top-style: groove;
+  border-top-color: #555; 
+}
+  #sidebar .panel {
+    background-color: white;
+    border: 0;
+    border-bottom-width: 2px;
+    border-bottom-style: groove;
+    border-bottom-color: #555; }
+.shadeHide {
+  display: none !important;
+}
+
+.shadeShow {
+  display: block !important;
+}
+
+/*///////////  NAVIGATION MENU ///////////////////////////////*/
+
+#menuController {
+  .panel-group {
+    margin-right: 0;
+  }
+  .panel-default > .panel-heading span {
+    font-size: .8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #A4A0AC  !important;
+    text-shadow: -2px 1px 5px rgba(41, 41, 41, 1);
+    cursor: pointer;
+  }
+  .panel-collapse {
+    background-color: #32394A;
+    /* really darkgray */
+    a {
+      color: #fff;
+      /*  very light gray */
+    }
+  }
+}
+
+.panel-collapse ul li a :hover {
+  background-color: #262C3A;
+}
+
+.glyphicon {
+  color: white;
+}
+
+/*   /// MENU FULL HEIGHT - dark //////// */
+
+html, body {
+  height: 100%;
+  padding: 0;
+}
+
+#wrapper {
+  height: 100%;
+  padding: 0;
+  background-color: white;
+  padding-bottom: 50px;
+}
+
+#sidebar {
+  background-color: rgba(14, 21, 39, 0.53);
+  padding: 0;
+}
+
+#maincanvas {
+  display: block;
+  height: 100%;
+  /* min-width:328px;*/
+}
+
+.ccvalidinputrow {
+  height: 35px;
+}
+
+#pageheader {
+  padding: 0 0 0 4px;
+}
+
+/*///////////  NAVIGATION MENU ///////////////////////////////*/
+}
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */

@@ -1,0 +1,24 @@
+
+<div ng-controller="merchantSettingsController" id="searchTransMainDiv">
+	<div class="panel panel-default" id="mintSettings" ng-init="init();">
+	<div class="panel-heading bg-custom">Merchant Settings Page</div>
+		<div class="panel-body">
+
+			<br>
+			<div class="gridStyle" ng-grid="gridData" ng-show="displayGrid"></div>
+			<br><br>
+
+			<div modaldirective ></div>
+
+			<button class="btn btn-custom" data-toggle="modal" ng-click="modalmethod('Enable this transaction?');" data-target="#myModal">
+			  Enable
+			</button>
+			<button class="btn btn-custom" data-toggle="modal" ng-click="modalmethod('Disable this transaction?');" data-target="#myModal">
+			  Disable
+			</button>
+			<button class="btn btn-custom" data-toggle="modal" ng-click="modalmethod('Delete this transaction?');" data-target="#myModal">
+			  Delete
+			</button>
+		</div>
+	</div>
+</div>

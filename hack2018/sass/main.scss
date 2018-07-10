@@ -1,0 +1,2074 @@
+
+
+//General Variables
+
+
+@import "_variables";
+
+
+/* line 5, ../sass/main.scss */
+
+
+body {
+
+
+    padding-top: 10px;
+
+
+    background-color: $verylightcolor;
+
+
+    overflow-x: hidden;
+
+
+    /* Prevent scroll on narrow devices */
+
+
+}
+
+
+// test
+
+
+
+/* line 11, ../sass/main.scss */
+
+
+#sidebar {
+
+
+    height: 100%;
+
+
+    padding-right: 0;
+
+
+    z-index: 3;
+
+
+    padding-top: 0;
+
+
+    padding-right: 3px;
+
+
+    .nav > li: first-child {
+
+
+        border-top: 0;
+
+
+    }
+
+
+    .nav > li > a > img {
+
+
+        max-width: 14px;
+
+
+    }
+
+
+    .nav > li > a:hover, .nav > li > a:focus {
+
+
+        text-decoration: none;
+
+
+    }
+
+
+    .nav .caret {
+
+
+        border-top-color: $verylightcolor;
+
+
+        border-bottom-color: $verylightcolor;
+
+
+    }
+
+
+    .nav a:hover .caret {
+
+
+        border-top-color: $verylightcolor;
+
+
+    }
+
+
+    .panel.panel-default .panel-heading {
+
+
+        background-color: $headerColor !important
+
+
+    }
+
+
+    .panel-body {
+
+
+        padding: 0;
+
+
+    }
+
+
+    .panel-group .panel-heading + .panel-collapse .panel-body {
+
+
+        border: 0 $lightgraybackground solid;
+
+
+        border-top-width: 2px;
+
+
+        border-top-style: groove;
+
+
+        border-top-color: #555;
+
+
+    }
+
+
+    .panel-heading {
+
+
+        border-bottom: 1px solid transparent;
+
+
+        border-top-left-radius: 0;
+
+
+        border-top-right-radius: 0;
+
+
+    }
+
+
+    .panel-group .panel {
+
+
+        margin-bottom: 0;
+
+
+        overflow: hidden;
+
+
+        border-radius: 0;
+
+
+    }
+
+
+    .panel-group .panel + .panel {
+
+
+        margin-top: 0;
+
+
+    }
+
+
+    li {
+
+
+        border-bottom: 1px solid #ddd;
+
+
+        margin: 0 10px;
+
+
+    }
+
+
+}
+
+
+@import "_mediascreen";
+
+
+/* line 23, ../sass/main.scss */
+
+
+.mainMenu {
+
+
+    background-color: grey;
+
+
+}
+
+
+.csv-data-link-span {
+
+
+    position: relative;
+
+
+    left: -89px;
+
+
+    top: 11px;
+
+
+}
+
+
+/* line 27, ../sass/main.scss */
+
+
+.menuHeading {
+
+
+    color: $authHeaderBlue !important;
+
+
+    font-family: Arial !important;
+
+
+    font-weight: bold !important;
+
+
+    font-size: 11pt !important;
+
+
+    &: focus, &: hover {
+
+
+        -moz-text-decoration-color: -moz-use-text-color;
+
+
+        -moz-text-decoration-line: none !important;
+
+
+        text-decoration: none !important;
+
+
+        -moz-text-decoration-style: solid;
+
+
+        background-color: #EEEEEE;
+
+
+        color: $authHeaderBlue !important;
+
+
+    }
+
+
+}
+
+
+.backbutton {
+
+
+    cursor: pointer;
+
+
+    top: 15px;
+
+
+    left: 24px;
+
+
+    cursor: pointer;
+
+
+    display: inline-block;
+
+
+    height: 36px;
+
+
+    padding-top: 10px;
+
+
+    padding-left: 20px;
+
+
+}
+
+
+h3 {
+
+
+    .panel-title {
+
+
+        font-weight: bold;
+
+
+    }
+
+
+    .centeredtitle {
+
+
+        text-align: center;
+
+
+        font-weight: bold;
+
+
+    }
+
+
+}
+
+
+#logoimgdiv {
+
+
+    background: url(../assets/img/AuthorizeNetLogo.png);
+
+
+    display: inline-block;
+
+
+    width: 232px;
+
+
+    height: 30px;
+
+
+    margin: 14px 0;
+
+
+}
+
+
+#menusignout {
+
+
+    display: none;
+
+
+}
+
+
+#bubblenametable {
+
+
+    display: inline;
+
+
+}
+
+
+#pageheader {
+
+
+    font-size: 25px;
+
+
+    padding: 0 0 0 18px;
+
+
+}
+
+
+#wrapper.container {
+
+
+    background-color: $verylightcolor!important;
+
+
+    border: 1px solid #ddd;
+
+
+    padding-bottom: 50px;
+
+
+}
+
+
+[ui-view] {
+
+
+    height: 100%;
+
+
+}
+
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+
+
+    -moz-transition: all .2s ease-in-out;
+
+
+    -o-transition: all .2s ease-in-out;
+
+
+    -webkit-transition: all .2s ease-in-out;
+
+
+    height: 100%;
+
+
+    position: absolute;
+
+
+    transition: all .2s ease-in-out;
+
+
+    width: 100%;
+
+
+}
+
+
+[ui-view].ng-leave-active {
+
+
+    left: -100%;
+
+
+}
+
+
+[ui-view].ng-enter {
+
+
+    left: 100%;
+
+
+}
+
+
+.gridStyle {
+
+
+    border: 1px solid #d4d4d4;
+
+
+    position: relative;
+
+
+}
+
+
+.loginlink {
+
+
+    display: inline-block;
+
+
+    width: 30%;
+
+
+}
+
+
+.angular-center-container {
+
+
+    background-color: #F5F5F5;
+
+
+    display: table;
+
+
+    height: 100%;
+
+
+    left: 0;
+
+
+    position: fixed;
+
+
+    top: 0;
+
+
+    width: 100%;
+
+
+    z-index: 5;
+
+
+}
+
+
+.angular-centered {
+
+
+    display: table-cell;
+
+
+    margin-bottom: 100px;
+
+
+    text-align: center;
+
+
+    vertical-align: middle;
+
+
+}
+
+
+.loaderbg {
+
+
+    background-image: url(../assets/img/ajax-loader.gif);
+
+
+    background-repeat: no-repeat;
+
+
+    height: 32px;
+
+
+    left: 30%;
+
+
+    padding-left: 36px;
+
+
+    padding-top: 5px;
+
+
+    position: relative;
+
+
+    top: 40%;
+
+
+}
+
+
+.loaderContainer {
+
+
+    background-color: rgba(255, 255, 255, .8);
+
+
+    height: 100%;
+
+
+    left: 0;
+
+
+    position: fixed;
+
+
+    top: 0;
+
+
+    width: 100%;
+
+
+    z-index: 10;
+
+
+}
+
+
+#searchTransMainDiv {
+
+
+    .gridStyle .ngViewport {
+
+
+        display: inline;
+
+
+    }
+
+
+    .gridStyle {
+
+
+        background-image: url(../assets/img/gridback.png);
+
+
+        background-position: 1px 30px;
+
+
+        background-repeat: repeat;
+
+
+        background-size: 1px 60px;
+
+
+    }
+
+
+    .col-md-5, #searchTransMainDiv .col-md-12, #searchTransMainDiv .col-md-2 {
+
+
+        padding: 4px;
+
+
+    }
+
+
+    .ngCellText.col0 {
+
+
+        color: $iconBlue;
+
+
+        font-weight: 700;
+
+
+    }
+
+
+    .ngCellText span {
+
+
+        cursor: pointer!important;
+
+
+    }
+
+
+}
+
+
+#custRecName {
+
+
+    color: $iconBlue;
+
+
+    font-size: 18px;
+
+
+}
+
+
+#transactionDetails {
+
+
+    border: 1px solid #ddd;
+
+
+    padding: 15px;
+
+
+    .mainrow {
+
+
+        padding: 7px 0;
+
+
+    }
+
+
+}
+
+
+.fakeData {
+
+
+    background: url(../assets/img/fakeData.png);
+
+
+    cursor: pointer;
+
+
+    float: left;
+
+
+    height: 50px;
+
+
+    width: 70px;
+
+
+}
+
+
+#shade {
+
+
+    background: #000;
+
+
+    height: 100%;
+
+
+    left: 0;
+
+
+    opacity: 0.5;
+
+
+    position: fixed;
+
+
+    top: 0;
+
+
+    width: 100%;
+
+
+    z-index: 2;
+
+
+}
+
+
+.badge {
+
+
+    background-color: $visaYellowOrange!important;
+
+
+    border: 2px solid #cb9b3f;
+
+
+    border-radius: 16px;
+
+
+    color: $verylightcolor;
+
+
+    display: inline-block;
+
+
+    font-size: 14px;
+
+
+    font-weight: 700;
+
+
+    line-height: 1;
+
+
+    min-width: 10px;
+
+
+    padding: 8px 11px;
+
+
+    position: relative;
+
+
+    text-align: center;
+
+
+    top: -7px;
+
+
+    vertical-align: baseline;
+
+
+    white-space: nowrap;
+
+
+}
+
+
+.btn-custom {
+
+
+    background-color: $visaDarkBlue!important;
+
+
+    border-color: #16384F!important;
+
+
+    color: $verylightcolor!important;
+
+
+    &: hover {
+
+
+        background-color: #4b9cd3!important;
+
+
+        border-color: #3785b6!important;
+
+
+        color: $verylightcolor!important;
+
+
+    }
+
+
+}
+
+
+.btn-custom-orange {
+
+
+    background-color: $visaYellowOrange!important;
+
+
+    color: $verylightcolor!important;
+
+
+}
+
+
+.btn-custom.disabled, .btn-custom[disabled], fieldset[disabled] .btn-custom, .btn-custom.disabled:hover, .btn-custom[disabled]:hover, fieldset[disabled] .btn-custom:hover, .btn-custom.disabled:focus, .btn-custom[disabled]:focus, fieldset[disabled] .btn-custom:focus, .btn-custom.disabled:active, .btn-custom[disabled]:active, fieldset[disabled] .btn-custom:active, .btn-custom.disabled.active, .btn-custom[disabled].active, fieldset[disabled] .btn-custom.active {
+
+
+    background-color: $headerColor;
+
+
+}
+
+
+.btnmargin {
+
+
+    margin: 10px;
+
+
+}
+
+
+a {
+
+
+    &: hover {
+
+
+        color: $iconBlue;
+
+
+        cursor: pointer;
+
+
+        text-decoration: none;
+
+
+    }
+
+
+}
+
+
+a, .fakelink {
+
+
+    color: #1d4a69;
+
+
+    font-weight: bold;
+
+
+    cursor: pointer;
+
+
+}
+
+
+.bg-custom .menuHeading, .bg-custom, .panel-custom > .panel-heading, .panel-default > .panel-heading {
+
+
+    background-color: $headerColor!important;
+
+
+    color: $verylightcolor!important;
+
+
+    font-family: Arial!important;
+
+
+    font-size: 11pt!important;
+
+
+    font-weight: 500!important;
+
+
+}
+
+
+.createTransFormTitle {
+
+
+    color: $iconBlue;
+
+
+    margin-bottom: 25px;
+
+
+    margin-left: 10px;
+
+
+}
+
+
+.searchtransrow {
+
+
+    margin-top: 10px;
+
+
+    text-align: right;
+
+
+}
+
+
+.list-group.innergraytoptable .list-group-item {
+
+
+    background-color: $verylightcolor;
+
+
+    border-bottom: 1px solid #ddd;
+
+
+    border-left: 0;
+
+
+    border-right: 0;
+
+
+    border-top: 0;
+
+
+    display: block;
+
+
+    margin-bottom: 0;
+
+
+    padding: 19px 15px;
+
+
+    position: relative;
+
+
+}
+
+
+.list-group.innergraytoptable .list-group-item:last-child {
+
+
+    border-bottom: 0!important;
+
+
+}
+
+
+.list-group.innergraytoptable {
+
+
+    margin: 0 10px;
+
+
+}
+
+
+#sidebar li:last-child {
+
+
+    border-bottom: 0;
+
+
+}
+
+
+.panel-heading.bg-custom.innergraytoptable {
+
+
+    background-color: $lightgraybackground!important;
+
+
+    border: 1px solid $mediumgrayborder;
+
+
+    color: $visaDarkBlue!important;
+
+
+    margin-bottom: 0;
+
+
+}
+
+
+.glyphicon {
+
+
+    margin-right: 10px;
+
+
+}
+
+
+#bubblename {
+
+
+    background-color: #4c9dd2;
+
+
+    color: $verylightcolor;
+
+
+    height: 22px;
+
+
+    margin-right: -101px;
+
+
+    position: relative;
+
+
+    text-align: center;
+
+
+    top: -9px;
+
+
+    white-space: nowrap;
+
+
+    z-index: 2;
+
+
+}
+
+
+#bubblenametable {
+
+
+    cursor: pointer;
+
+
+    float: right;
+
+
+    margin-right: 40px;
+
+
+}
+
+
+.mainpageheading {
+
+
+    border-bottom: 1px solid #ddd;
+
+
+    padding: 0;
+
+
+}
+
+
+.menuicon {
+
+
+    color: $iconBlue;
+
+
+    float: left;
+
+
+    font-size: 21px;
+
+
+    margin-right: 10px;
+
+
+    margin-top: 10px;
+
+
+}
+
+
+.topbaricon {
+
+
+    color: #4c9dd2;
+
+
+    font-size: 24px;
+
+
+    margin-right: 8px;
+
+
+}
+
+
+.viewTransButtonBar {
+
+
+    line-height: 34px;
+
+
+}
+
+
+.orange {
+
+
+    color: $visaYellowOrange;
+
+
+}
+
+
+.nav > li > a:hover, .nav > li > a:focus {
+
+
+    background-color: transparent;
+
+
+}
+
+
+.nav {
+
+
+    min-width: 230px;
+
+
+}
+
+
+.panel-group {
+
+
+    margin: 0 20px 20px 0;
+
+
+}
+
+
+.navbar {
+
+
+    border: 0;
+
+
+    border-radius: 0;
+
+
+    margin-top: 0;
+
+
+}
+
+
+.panel, .panel-heading, .panel-group .panel {
+
+
+    border-radius: 0;
+
+
+    border-top-left-radius: 0;
+
+
+    border-top-right-radius: 0;
+
+
+}
+
+
+.borderlesspanel .panel-heading {
+
+
+    margin-bottom: 20px;
+
+
+}
+
+
+.panel-default > .panel-heading.gray-panel-heading {
+
+
+    background-color: $lightgraybackground!important;
+
+
+    color: $visaDarkBlue!important;
+
+
+}
+
+
+.bg-custom.gray-panel-heading {
+
+
+    background-color: $lightgraybackground!important;
+
+
+    color: $visaDarkBlue!important;
+
+
+    height: 98px;
+
+
+    padding-top: 20px;
+
+
+}
+
+
+.panel-heading.bg-custom a {
+
+
+    color: $visaDarkBlue;
+
+
+}
+
+
+.panel-heading {
+
+
+    padding: 10px 15px;
+
+
+}
+
+
+.bg-custom .menuHeading, .bg-custom .menuHeading:hover {
+
+
+    color: $verylightcolor!important;
+
+
+}
+
+
+.navbar-default {
+
+
+    background-color: transparent;
+
+
+    border-color: transparent;
+
+
+}
+
+
+.panel-custom .nav-tabs {
+
+
+    background-color: #F5F5F5;
+
+
+    border-bottom: 1px solid #aaa;
+
+
+    li.active a
+
+
+    /*,.nav-tabs > li.active > a:hover,.nav-tabs > li.active > a:focus */
+
+
+    {
+
+
+        border: 1px solid #aaa;
+
+
+        border-bottom-color: $verylightcolor;
+
+
+    }
+
+
+    ul li a, ul li a:hover {
+
+
+        background: $headerColor;
+
+
+        color: $verylightcolor;
+
+
+    }
+
+
+    .nav-tabs li a {
+
+
+        border-radius: 4px 4px 0 0;
+
+
+        line-height: 1.42857143;
+
+
+        margin-right: 2px;
+
+
+    }
+
+
+}
+
+
+#mintSettings input[type=radio], input[type=checkbox] {
+
+
+    line-height: normal;
+
+
+    margin: 5px 5px 0;
+
+
+}
+
+
+#myModal {
+
+
+    top: 30%;
+
+
+}
+
+
+.floatright {
+
+
+    float: right;
+
+
+}
+
+
+#transDetMainDiv {
+
+
+    div {
+
+
+        overflow: hidden;
+
+
+        white-space: nowrap;
+
+
+    }
+
+
+    .panel.panel-custom {
+
+
+        padding-bottom: 20px;
+
+
+    }
+
+
+}
+
+
+.grayback {
+
+
+    background-color: #ccc;
+
+
+    width: 161px;
+
+
+}
+
+
+.underLineItems {
+
+
+    border-top: 1px solid #ccc;
+
+
+}
+
+
+#lineItemTable .titleRow td {
+
+
+    background-color: #eee;
+
+
+    color: #000;
+
+
+}
+
+
+#toprightsummary {
+
+
+    min-width: 250px;
+
+
+}
+
+
+.trscell {
+
+
+    outline: 1px solid #e7e7e7;
+
+
+}
+
+
+.trsLeft {
+
+
+    background-color: #f8f8f8;
+
+
+    font-size: 12px;
+
+
+    line-height: 21px;
+
+
+}
+
+
+.lightgraytitlebar {
+
+
+    background-color: #CCC;
+
+
+    border: 1px solid #999;
+
+
+    border-radius: 4px 4px 0 0;
+
+
+    color: #000;
+
+
+    font-weight: 700;
+
+
+    padding: 4px;
+
+
+}
+
+
+#termsAndConditions {
+
+
+    font-size: 13px;
+
+
+    position: absolute;
+
+
+}
+
+
+.grayborder {
+
+
+    border-bottom: 1px solid #e7e7e7;
+
+
+}
+
+
+#lineitemarea {
+
+
+    padding: 15px;
+
+
+}
+
+
+.compactInvoiceList .totalamount {
+
+
+    font-size: 24px;
+
+
+    font-weight: 700;
+
+
+    position: absolute;
+
+
+    top: 21px;
+
+
+}
+
+
+#accordionSettings {
+
+
+    padding-bottom: 40px;
+
+
+}
+
+
+#lineItemDiv #lineItemDiv {
+
+
+    input {
+
+
+        height: 26px;
+
+
+        width: 100%;
+
+
+    }
+
+
+    #titleRow div {
+
+
+        background-color: #1a1f71;
+
+
+        color: $verylightcolor;
+
+
+    }
+
+
+}
+
+
+.btn-block {
+
+
+    width: 140px;
+
+
+}
+
+
+.btn-block-center {
+
+
+    margin: 0 auto;
+
+
+}
+
+
+.gray {
+
+
+    background-color: #eee;
+
+
+    padding: 3px!important;
+
+
+}
+
+
+.cell {
+
+
+    border: 1px solid #B1B1B1;
+
+
+    height: 28px;
+
+
+}
+
+
+#lineItemDiv .col-xs-2 div, #lineItemDiv .col-xs-4 div {
+
+
+    padding: 4px 0 2px 9px;
+
+
+}
+
+
+#titleRow div {
+
+
+    margin: 0;
+
+
+}
+
+
+.fieldsetBorderless {
+
+
+    border: 0;
+
+
+    height: 0;
+
+
+}
+
+
+.fieldsetBorder {
+
+
+    border: 1px solid #aaa;
+
+
+    border-radius: 4px;
+
+
+    margin-bottom: 12px;
+
+
+    margin-left: 16px;
+
+
+    margin-right: 16px;
+
+
+}
+
+
+.compactfield {
+
+
+    padding: 0 4px!important;
+
+
+}
+
+
+.accordLink {
+
+
+    color: #1a1f71;
+
+
+    cursor: pointer;
+
+
+    font-weight: 700;
+
+
+}
+
+
+.accordLink:hover {
+
+
+    color: #1a1f71;
+
+
+}
+
+
+.accordFormareaopen {
+
+
+    display: block!important;
+
+
+}
+
+
+.accordFormareaclosed {
+
+
+    display: none!important;
+
+
+}
+
+
+.compactTransListRow {
+
+
+    padding: 5px;
+
+
+    label {
+
+
+        width: 100%;
+
+
+    }
+
+
+    div {
+
+
+        margin-bottom: 0;
+
+
+    }
+
+
+    .totalamount {
+
+
+        font-size: 20px;
+
+
+        font-weight: 700;
+
+
+        padding-top: 10px;
+
+
+        position: relative;
+
+
+    }
+
+
+    .totalamount .amount {
+
+
+        position: absolute;
+
+
+        top: 29px;
+
+
+    }
+
+
+}
+
+
+.iltitle {
+
+
+    color: #999;
+
+
+    font-size: 12px;
+
+
+}
+
+
+.ilvalue {
+
+
+    font-weight: 700;
+
+
+}
+
+
+.even {
+
+
+    background-color: #E9E9E9;
+
+
+}
+
+
+.totalCell {
+
+
+    font-size: 20px;
+
+
+    font-weight: 700;
+
+
+    position: relative;
+
+
+    top: 34px;
+
+
+}
+
+
+.graylabel {
+
+
+    color: $gray;
+
+
+    font-size: 12px;
+
+
+}
+
+
+.lineitemrow {
+
+
+    border: 1px solid #e7e7e7;
+
+
+}
+
+
+.panel {
+
+
+    -webkit-box-shadow: 0 0 0;
+
+
+}
+
+
+fieldset {
+
+
+    border-bottom: 1px solid #aaa;
+
+
+    border-left: 1px solid #aaa;
+
+
+    border-radius: 4px;
+
+
+    border-right: 1px solid #aaa;
+
+
+    border-top: 1px solid #aaa;
+
+
+    margin-bottom: 12px;
+
+
+    margin-left: 16px;
+
+
+    margin-right: 16px;
+
+
+}
+
+
+legend {
+
+
+    border-bottom: 0;
+
+
+    font-size: 15px;
+
+
+    font-weight: 700;
+
+
+    margin-bottom: 6px;
+
+
+    margin-left: 14px;
+
+
+    width: auto;
+
+
+}
+
+
+#loginHeader {
+
+
+    background-color: #f2f2f2;
+
+
+    background-position: 44px;
+
+
+    background-repeat: no-repeat;
+
+
+    height: 60px;
+
+
+    margin: 0 -15px 11px;
+
+
+    padding-top: 13px;
+
+
+    width: 349px;
+
+
+}
+
+
+#loginHeaderLogo {
+
+
+    background: url(../assets/img/AuthorizeNetLogo.png);
+
+
+    background-repeat: no-repeat;
+
+
+    height: 30px;
+
+
+    margin-left: 40px;
+
+
+}
+
+
+#footer {
+
+
+    bottom: 0;
+
+
+    display: inline-block;
+
+
+    float: right;
+
+
+    height: 40px;
+
+
+    left: 0;
+
+
+    margin-left: auto;
+
+
+    margin-right: auto;
+
+
+    position: relative;
+
+
+    width: 100%;
+
+
+    margin-top: -40px;
+
+
+}
+
+
+#footerinner {
+
+
+    background-color: $lightgraybackground;
+
+
+    border: 1px solid #ddd;
+
+
+    height: 46px;
+
+
+}
+
+
+#footerimg {
+
+
+    background: url(/assets/img/powered_simple.png);
+
+
+    float: right;
+
+
+    height: 19px;
+
+
+    margin: 12px 10px 0 0;
+
+
+    width: 194px;
+
+
+}
+
+
+[ui-view].ng-leave, [ui-view].ng-enter-active {
+
+
+    left: 0;
+
+
+}
+
+
+#loginPageID, #searchTransButton {
+
+
+    display: inline-block;
+
+
+}
+
+
+#receiptID .panel-body, .paddedThign {
+
+
+    padding: 10px;
+
+
+}
+
+
+.lightblue, .blue {
+
+
+    color: $iconBlue;
+
+
+}
+
+
+.shadeHide, .shadeShow, .ngRowCountPicker, #accordFormArea {
+
+
+    display: none;
+
+
+}
+
+
+body, #lineItemDiv div {
+
+
+    margin: 0;
+
+
+    padding: 0;
+
+
+}
+
+
+#menuController, #accordionSettings .container {
+
+
+    color: $verylightcolor;
+
+
+}
+
+
+.container, .panel-body, #lineItemDiv {
+
+
+    padding: 0;
+
+
+}
+
+
+.borderlesspanel, .panel.panel-custom {
+
+
+    border: 0;
+
+
+}

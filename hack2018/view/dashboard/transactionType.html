@@ -1,0 +1,62 @@
+<div>
+	<div class="form-group">
+		<label class="col-xs-3">Select Duration:</label>
+		<div class="col-xs-3">
+			<select class="form-control">
+				<option value="7">last 7 days</option>
+				<option value="15">last 15 days</option>
+				<option value="30">last 30 days</option>
+			
+			</select>
+		</div>
+	</div>
+
+	<div google-chart chart="dashBoardChart" style="{{chart.cssStyle}}"></div>
+	<div class="panel panel-default">
+
+
+
+
+	  <div class="panel-heading bg-custom">
+	  	<h3 class="panel-title ">Transaction Lists
+		  	
+	  	</h3>
+	  </div>
+		<div class="panel-body">
+
+			<ul class="list-group innergraytoptable" ng-click="setTransactionType($event)">
+				<li class="list-group-item"><a name="Unsettled">Unsettled Transactions</a>
+					<div style="float:right"><span class="badge">{{unsettledTransCount}}</span></div>
+				</li>
+
+				<li class="list-group-item"><a>Settled Transactions</a>
+					<div style="float:right"><span class="badge">{{settledTransCount}}</span></div>
+				</li>
+
+
+				<li class="list-group-item"><a>Voided Transactions</a>
+					<div style="float:right"><span class="badge">{{voidTransCount}}</span></div>
+				</li>
+
+
+				<li class="list-group-item"><a>Refunded Transactions</a>
+					<div class="pull-right"><span class="badge">{{refundTransCount}}</span></div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+		
+
+
+
+<!--
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="text-right " style="margin-top:7px;">
+				<button  type="button" class="btn btn-custom" ng-click="refreshButton()">Refresh</button>
+				
+			</div>
+		</nav>	
+-->
+</div>
+

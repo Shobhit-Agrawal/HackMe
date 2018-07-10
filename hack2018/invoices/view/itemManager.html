@@ -1,0 +1,64 @@
+
+<div  id="searchTransMainDiv">
+	<div class="panel panel-custom">
+		<div class="panel-heading bg-custom">
+			<h3 class="panel-title">Item Manager</h3>
+		</div>
+		<div class="panel-body">
+
+
+			<div class="row">
+				<div class="col-sm-6">
+					  <div class="form-group">
+					    <label class="hidden-xs" for="item">Item</label>
+					    <input type="text" class="form-control" id="xxx" name="xxx" 
+					    placeholder="Item" ng-model="itemManager.item">
+					  </div>				
+				</div>
+				<div class="col-sm-6">
+					  <div class="form-group">
+					    <label class="hidden-xs" for="description">Description</label>
+					    <input type="text" class="form-control" id="xxx" name="xxx" 
+					    placeholder="Description" ng-model="itemManager.description">
+					  </div>				
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					  <div class="form-group">
+					    <label class="hidden-xs" for="unitCost">Price</label>
+					    <input type="text" class="form-control" id="xxx" name="xxx" 
+					    placeholder="Price" ng-model="itemManager.unitCost">
+					  </div>				
+				</div>
+				<div class="col-sm-6">
+
+					<button type="button" id="btnNext" class="btn btn-custom" ng-click="currentTab=currentTab+1" ng-hide="InsertNotUpdate" style="margin-top: 24px;">
+						Update
+					</button>
+
+					<button type="button" id="btnNext" class="btn btn-custom" ng-click="currentTab=currentTab+1" ng-show="InsertNotUpdate" style="margin-top: 24px;">
+						Insert
+					</button>
+
+					<button type="button" id="btnNext" class="btn btn-custom" ng-click="clearItemInputs();" style="margin-top: 24px;">
+						Clear Form
+					</button>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="form-group">
+						<label class="hidden-xs" for="businessName">Existing Items</label>
+						<div class="col-sm-12">
+							<div class="gridStyle" ng-grid="gridData"></div>
+						</div>
+					</div>				
+				</div>
+			</div>
+
+
+	</div>
+</div>

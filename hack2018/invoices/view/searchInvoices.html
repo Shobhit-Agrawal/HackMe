@@ -1,0 +1,128 @@
+<div id="searchTransMainDiv">
+    <div class="panel panel-custom">
+        <div class="panel-heading bg-custom">
+            <h3 class="panel-title">Search Invoices</h3>
+        </div>
+        <div class="panel-body">
+
+
+            <style>
+            fieldset {
+                border-top: 1px solid #aaa;
+                border-bottom: 1px solid #aaa;
+                border-left: 1px solid #aaa;
+                border-right: 1px solid #aaa;
+                margin-right: 16px;
+                margin-left: 16px;
+                border-radius: 4px;
+                margin-bottom: 12px;
+            }
+            legend {
+                width: auto;
+                margin-bottom: 6px;
+                border-bottom: 0;
+                margin-left: 14px;
+                font-size: 15px;
+                font-weight: bold;
+            }
+            </style>
+
+
+            <div class="row">
+                <fieldset>
+                    <legend>Date Range:</legend>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="dateRangeStart" name="dateRangeStart" ng-model="searchInvoice.dateRangeStart">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="dateRangeEnd" name="dateRangeEnd" ng-model="searchInvoice.dateRangeEnd">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="hidden-xs" for="recipientName">Recipient Name</label>
+                        <input type="text" class="form-control" id="recipientName" name="recipientName" placeholder="Recipient Name" ng-model="searchInvoice.recipientName">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="hidden-xs" for="recipientEmail">Recipient Email</label>
+                        <input type="text" class="form-control" id="recipientEmail" name="recipientEmail" placeholder="Recipient Email" ng-model="searchInvoice.recipientEmail">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="hidden-xs" for="invoiceNumber">Invoice #</label>
+                        <input type="text" class="form-control" id="invoiceNumber" name="invoiceNumber" placeholder="Invoice #" ng-model="searchInvoice.invoiceID">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="hidden-xs" for="status">Status</label>
+                        <select class="form-control" id="status" name="status" ng-model="searchInvoice.status">
+                            <option value="" disabled selected>Status</option>
+                            <option>Paid</option>
+                            <option>Unpaid</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="text-center " style="margin-top:7px;">
+                            <button type="button" class="btn btn-custom" ng-click="searchBtnHandler()">Search</button>
+                            <button type="button" class="btn btn-custom" ng-click="searchBtnHandler()">Reset</button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+
+
+
+            <style>
+            .iltitle {
+                font-size:12px;
+                text-decoration:;
+                color:#999;
+            }
+            .ilvalue {
+                font-weight:bold;
+            }
+            .loaderContainer {
+                display:none;
+            }
+            .even {
+                background-color:#f8f8f8;
+            }
+            .totalCell {
+                position: relative;
+                top: 28px;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            </style>
+
+            <div style="border:1px solid #999;">
+                <div invoice-list invoice="invoices">
+                </div>
+
+
+            </div>
+        </div>

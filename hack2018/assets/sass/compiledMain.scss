@@ -1,0 +1,116 @@
+@import "_variables";
+body{
+	font-size: 12px;
+	position: relative;
+
+}
+header{
+	width: 100%;
+	height: 100px;
+	background-color: $headerBG;
+	color: white;
+	font-size: 3em;
+	position: Relative;
+}
+footer {
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:black;
+   color: white;
+   display: block;
+   margin-top: 1.3em;
+}
+.wrapper{
+	color: black;
+	padding :60px 60px ;
+}
+
+
+div.termPrivacy{
+	padding-top: 10px;
+	text-align: center;
+}
+div.legal{
+	margin-top: 5px;
+	text-align: center;
+
+}
+div.termPrivacy :first-child{
+	padding-right: 15px;
+}
+#headerTitleID{
+	vertical-align: middle;
+	padding-top: 25px;
+	padding-left: 25px;
+}
+#pageheadingID{
+	font-size: 3.5em;
+	height: 60px;
+	border-bottom: 1px solid gray;
+	
+}
+#pageSubheadingID{
+	margin-top: 20px;
+	font-size: 2em;
+}
+#headingInfoID{
+	margin-top: 10px;
+	font-size: 1.2em;
+}
+div.infoContainer{
+	border: 1px solid gray;
+	border-radius: 5px;
+	
+	padding: 2.5em;
+	margin-top: 2.5em;
+	font-size: 1.5em;
+	padding-right: 100px;
+}
+div.innerContainer{
+	text-align: center;
+	width: 70%
+}
+
+div.boardingModule .heading{
+	position: absolute;
+	margin-top: -.65em;
+	padding-left: .3em;
+	padding-right: .3em;
+	background-color: white;
+	margin-left: 1.2em;
+	font-size: 2.5em;
+}
+
+.boardingModule{
+	margin-top: 15px;
+}
+div.rowElement {
+	margin-top: 10px; 
+	height: 2em;
+	text-align: justify;
+}
+div.infoContainer .lastChild{
+	margin-left: 110px;
+	width: 30%;
+}
+label {
+    display: inline-block;
+    width:100px;
+    text-align: right;
+    margin-right: 5px;
+}
+#firstNameID, #lastNameID{
+	width: 40%;
+}
+#emailInptID{
+	width: 50%;
+}
+.rightAlign{
+	display: inline-block;
+	float: right;
+
+}
+div.country{
+	display: inline-block;
+	width: 50%
+}

@@ -1,0 +1,95 @@
+{
+  "title":"Device Json",
+  "devices": [
+   {
+        "id":1,
+        "DeviceIdentifier":"Apple1",
+        "MobileDeviceStatusID":2,
+        "CreatedDateTime":"03/15/2014",
+        "CreatedByUserId":101,
+        "Description":"This is a new applie device",
+        "PhoneNumber":"2254453986",
+        "status":"ENABLED",
+        "DevicePlatform":""
+    },
+    {
+        "id":2,
+        "DeviceIdentifier":"Android2",
+        "MobileDeviceStatusID":2,
+        "CreatedDateTime":"03/15/2014",
+        "CreatedByUserId":102,
+        "Description":"This is a new applie device",
+        "PhoneNumber":"3254453987",
+        "status":"ENABLED",
+        "DevicePlatform":""
+    },
+    {
+        "id":3,
+        "DeviceIdentifier":"Microsoft3",
+        "MobileDeviceStatusID":2,
+        "CreatedDateTime":"03/15/2014",
+        "CreatedByUserId":103,
+        "Description":"This is a new applie device",
+        "PhoneNumber":"4254453988",
+        "status":"DISABLED",
+        "DevicePlatform":""
+    },
+    {
+        "id":4,
+        "DeviceIdentifier":"Apple4",
+        "MobileDeviceStatusID":2,
+        "CreatedDateTime":"03/15/2014",
+        "CreatedByUserId":104,
+        "Description":"This is a new applie device",
+        "PhoneNumber":"5254453989",
+        "status":"SUSPENDED",
+        "DevicePlatform":""
+    },
+    {
+        "id":5,
+        "DeviceIdentifier":"Apple5",
+        "MobileDeviceStatusID":2,
+        "CreatedDateTime":"03/15/2014",
+        "CreatedByUserId":105,
+        "Description":"This is a new applie device",
+        "PhoneNumber":"6254453990",
+        "status":"ENABLED",
+        "DevicePlatform":""
+    },
+    {
+        "id":6,
+        "DeviceIdentifier":"Apple6",
+        "MobileDeviceStatusID":2,
+        "CreatedDateTime":"03/15/2014",
+        "CreatedByUserId":106,
+        "Description":"This is a new applie device",
+        "PhoneNumber":"4254453991",
+        "status":"ENABLED",
+        "DevicePlatform":""
+    },
+    {
+        "id":7,
+        "DeviceIdentifier":"Apple4",
+        "MobileDeviceStatusID":2,
+        "CreatedDateTime":"03/15/2014",
+        "CreatedByUserId":107,
+        "Description":"This is a new applie device",
+        "PhoneNumber":"7254453986",
+        "status":"SUSPENDED",
+        "DevicePlatform":""
+    },
+    {
+        "id":8,
+        "DeviceIdentifier":"Apple4",
+        "MobileDeviceStatusID":2,
+        "CreatedDateTime":"03/15/2014",
+        "CreatedByUserId":108,
+        "Description":"This is a new applie device",
+        "PhoneNumber":"8254453986",
+        "status":"SUSPENDED",
+        "DevicePlatform":""
+    }
+  ],
+  "statusCode": "Success"
+}
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html data-ng-app="authorizeNet" style="height:100%;">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>Authorize.Net</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/ng-grid.css" />
+    <link href="/lib/datepicker/css/datepicker.css" rel="stylesheet">
+    <link href="/assets/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body ng-controller="appController" style="height:100%;">
+    <div id="shade" ng-class="shadeshowhide"></div>
+    <div class="container" id="wrapper" ng-init="initApp()" style="min-height:100%;">
+        <loader ng-show="showLoader"></loader>
+        <div headerbar ng-show="isAuthenticated" class="hidden-xs"></div>
+
+        <div class="row-offcanvas row-offcanvas-right" ng-class="showMenu" id="maincanvas">
+            <div ng-class="AfterAuthClass">
+                <!-- Setting Page -->
+                <div id="appMainContainer">
+                    <div headerbar ng-show="isAuthenticated" class="visible-xs"></div>
+                    <div ui-view></div>
+                </div>
+            </div>
+            <div class="col-xs-9 col-sm-4 col-md-3  sidebar-offcanvas" ng-class="menuShow" id="sidebar" role="navigation" data-menu>
+                <!-- Main Menu -->
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="">
+        <div id="footerinner" class="container">
+            <div id="footerimg"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="lib/xml2json.min.js"></script>
+    <script src="lib/ng-google-chart.js"></script>
+    <script type="text/javascript" src="lib/angular-animate.js"></script>
+
+    <script type="text/javascript" src="lib/ui-bootstrap-0.10.0.js"></script>
+    <script type="text/javascript" src="lib/ui-bootstrap-tpls-0.10.0.js"></script>
+  
+    <script src="lib/angular-ui-router_0.2.10.js"></script>
+    <script src="lib/ng-grid-2.0.7.min.js"></script>
+    <script src="lib/ng-grid-csv-export.js"></script>
+    <script src="lib/mask.js"></script>
+    <script src="/lib/datepicker/js/bootstrap-datepicker.js"></script>
+
+
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="factory/appFactories.js"></script>
+    <script type="text/javascript" src="factory/pubSubChannel.js"></script>
+    <script type="text/javascript" src="service/userService.js"></script>
+    <script type="text/javascript" src="service/apiService.js"></script>
+    <script type="text/javascript" src="service/transactionService.js"></script>
+    <script type="text/javascript" src="service/merchantSettingsService.js"></script>
+
+    
+    <script type="text/javascript" src="controller/appController.js"></script>
+    <script type="text/javascript" src="controller/loginController.js"></script>
+    <script type="text/javascript" src="controller/menuController.js"></script>
+    <script type="text/javascript" src="controller/searchController.js"></script>
+
+    <script type="text/javascript" src="controller/vertualTerminal/createTransaction.js"></script>
+    <script type="text/javascript" src="controller/vertualTerminal/TransactionController.js"></script>
+    <script type="text/javascript" src="controller/merchantSettingsController.js"></script>
+
+    <script type="text/javascript" src="controller/vertualTerminal/transDetails.js"></script>
+    <script type="text/javascript" src="controller/vertualTerminal/cardSwipeController.js"></script>
+
+
+
+    <script type="text/javascript" src="directives/login_directive.js"></script>
+    <script type="text/javascript" src="directives/address_directive.js"></script>
+    <script type="text/javascript" src="directives/modal_directive.js"></script>
+    <script type="text/javascript" src="directives/validationdirective.js"></script>
+
+    <!--
+	    	Invoices Module  
+	  
+    <script src="invoices/module.js"></script>
+
+    <script type="text/javascript" src="invoices/controller/invoiceController.js"></script>
+    <script type="text/javascript" src="invoices/service/invoiceService.js"></script>
+    <script type="text/javascript" src="invoices/factory/invoiceFactory.js"></script>
+    <script type="text/javascript" src="invoices/directive/invoiceDirectives.js"></script>
+-->
+ <!-- this is a trick to show branding -->
+    <link rel="stylesheet" type="text/css" ng-href="css/customoverride/override{{customCSSoverrideid}}.css" />
+    <script type="text/javascript">
+    function processEvent(name,data)
+    {
+        //angular.element(document.getElementById('makePaymentBaseID')).scope().statusText += "\n index:"+name+" :"+data
+        angular.element(document.getElementById('cardSwipeID')).scope().processData(name,data);
+        
+        
+    }
+    </script>
+
+
+</body>
+
+</html>

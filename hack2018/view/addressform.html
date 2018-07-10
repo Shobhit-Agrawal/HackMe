@@ -1,0 +1,46 @@
+	
+	<!-- LINE NN ///////////////////////////////////////////////////////////////////////// -->
+	<div class="form-group">
+		<label for="address" class="hidden-xs col-sm-3 control-label">Address</label>
+		<div class="col-sm-9">
+			<input class="form-control" type="text" name="address"  id="address" placeholder="Address" ng-model="mycurrmodel.address" >
+			<div validationdir currelement="currform.expDate" inputtype="'text'" isreq="true" required></div>
+		</div>
+	</div>
+
+	<!-- LINE NN ///////////////////////////////////////////////////////////////////////// -->
+	<div class="form-group">
+		<label for="city" class="hidden-xs col-sm-3 control-label">City</label>
+		<div class="col-sm-9">
+			<input class="form-control" type="text" name="city" id="city" placeholder="City" ng-model="mycurrmodel.city" >
+			<div validationdir currelement="currform.city" inputtype="'text'" isreq="true" required></div>
+		</div>
+	</div>
+
+	<!-- LINE NN ///////////////////////////////////////////////////////////////////////// -->
+	<div class="form-group">
+		<label for="state" class="hidden-xs col-sm-3 control-label">State</label>
+		<div class="col-sm-9">
+			<input class="form-control" type="text" name="state" id="state" placeholder="State" ng-model="mycurrmodel.state" >
+			<div validationdir currelement="currform.city" inputtype="'text'" isreq="true" required></div>
+		</div>
+	</div>
+
+	<!-- LINE NN ///////////////////////////////////////////////////////////////////////// -->
+	<div class="form-group">
+		<label for="zip" class="hidden-xs col-sm-3 control-label">Zip</label>
+		<div class="col-sm-9">
+			<input class="form-control" name="zip" id="zip" placeholder="Zip" ng-model="mycurrmodel.zip" data-ng-pattern="/^\d{5}(?:[-\s]\d{4})?$/">
+			<div validationdir currelement="currform.zip" inputtype="'zip'" isreq="true" required></div>
+		</div>
+	</div>
+
+	<!-- LINE NN ///////////////////////////////////////////////////////////////////////// -->
+	<div class="form-group">
+		<label for="country" class="hidden-xs col-sm-3 control-label">Country</label>
+		<div class="col-sm-9">
+			<input class="form-control" id="country" placeholder="Country" ng-model="mycurrmodel.country" >
+			<div validationdir currelement="currform.expDate" inputtype="'text'" isreq="true" required></div>
+		</div>
+	</div>
+

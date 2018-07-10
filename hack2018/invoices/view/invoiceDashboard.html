@@ -1,0 +1,46 @@
+
+<div  class="" >
+	<div class="panel panel-default" ng-init="initDashBoard()">
+		<div class="panel-heading bg-custom">Invoice Dashboard</div>
+		<div class="panel-body">
+
+			<ul class="list-group" ng-click="showInvoiceListByStatus($event)">
+
+
+ 			  <li class="list-group-item"><a>Paid Invoices</a>
+				<div style="float:right"><span class="badge">$120,000</span></div>
+			  </li>
+
+			 
+			
+			  <li class="list-group-item"><a>Draft</a>
+				<div style="float:right"><span class="badge">$14,000</span></div>
+			  </li>
+
+			  <li class="list-group-item"><a >Unpaid Invoices</a>
+			  	<div style="float:right"><span class="badge">$18,000</span></div>
+			  </li>
+			
+
+			  <li class="list-group-item"><a>Overdue Invoices</a>
+				<div style="float:right"><span class="badge">$12,000</span></div>
+			  </li>
+
+
+			 
+
+			 
+			</ul>
+
+
+		</div>
+
+		<!-- TBD
+		Show a Graph for paid, unpaid and overdue invoices 
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="text-center " style="margin-top:7px;">
+				<button  type="button" class="btn btn-custom" ng-click="refreshButton()">Refresh</button>
+			</div>
+		</nav>	 -->
+	</div>
+</div>

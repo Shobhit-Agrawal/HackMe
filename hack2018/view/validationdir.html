@@ -1,0 +1,59 @@
+
+
+
+<style>
+.validerr{
+	color:red;
+}
+.showfalse{display:none;}
+.showtrue{display:inline;}
+</style>
+
+
+
+<div ng-hide="currelement.$pristine">
+	<!-- /////////////////  NUMBER  //////////////////////////////////////////////////////////////////////////////////////// -->
+	<div class="validerr" ng-show="currelement.$error.number">{{errjson['number']}}</div>
+	<!-- /////////////////  REQUIRED  //////////////////////////////////////////////////////////////////////////////////////// -->
+	<div class="validerr" ng-show="currelement.$error.required">{{errjson['required']}}</div>
+	<!-- /////////////////  EMAIL  //////////////////////////////////////////////////////////////////////////////////////// -->
+	<div class="validerr" ng-show="currelement.$error.email">{{errjson['email']}}</div>
+
+	
+	<div  class="validerr" ng-show="(inputtype === 'ccv')&&(currelement.$error.pattern)">{{errjson['ccv']}}</div>
+
+	<div  class="validerr" ng-show="(inputtype === 'zip')&&(currelement.$error.pattern)">{{errjson['zip']}}</div>
+
+	<div  class="validerr" ng-show="(inputtype === 'ccnum')&&(currelement.$error.pattern)">{{errjson['ccnum']}}</div>
+
+	<div  class="validerr" ng-show="(inputtype === 'amount')&&(currelement.$error.pattern)">{{errjson['amount']}}</div>
+
+
+
+
+</div>
+
+<!--
+
+<div ng-hide="element.$pristine">
+	
+	<div class="validerr" ng-show="element.$error.number">{{errjson['number']}}</div>
+	
+	<div class="validerr" ng-show="element.$error.required">{{errjson['required']}}</div>
+	
+	<div class="validerr" ng-show="element.$error.email">{{errjson['email']}}</div>
+
+	
+	<div  class="validerr" ng-show="(validationRules['ccv'] !== undefined)&&(element.$error.pattern)">{{errjson['ccv']}}</div>
+
+	<div  class="validerr" ng-show="(validationRules['ccv'] !== undefined)&&(element.$error.pattern)">{{errjson['zip']}}</div>
+
+	<div  class="validerr" ng-show="(validationRules['ccnum'] !== undefined)&&(element.$error.pattern)">{{errjson['ccnum']}}</div>
+
+	<div  class="validerr" ng-show="(validationRules['amount'] !== undefined)&&(element.$error.pattern)">{{errjson['amount']}}</div>
+
+
+
+
+</div>
+-->

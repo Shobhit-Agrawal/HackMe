@@ -1,0 +1,18 @@
+
+<div  id="searchTransMainDiv" ng-init="initList()">
+	<div class="panel panel-custom">
+		<div class="panel-heading bg-custom">
+			<h3 class="panel-title">{{currentTransType}} Transactions</h3>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+					<div class="col-sm-12">
+						<div class="gridStyle" ng-grid="gridData" ></div>
+				</div>
+			</div>
+		</div>
+		<h3 class="panel-title backbutton lightblue" ui-sref="dashboard.transactionType" ng-click="window.history.back()" >
+			<i class="fa fa-arrow-circle-left"></i> back
+		</h3>
+	</div>
+</div>

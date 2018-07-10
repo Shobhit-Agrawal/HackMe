@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-2 cell">
+        <input type='text' ng-model="item.itemName">
+    </div>
+    <div class="col-xs-4 cell">
+        <input type='text' ng-model='item.description'>
+    </div>
+    <div class="col-xs-2 cell">
+        <input type='text' ng-model='item.unitPrice' ng-keyup="computeAndDisplayLineItemTotal()">
+    </div>
+    <div class="col-xs-2 cell">
+        <input type='text' ng-model='item.quantity' ng-keyup="computeAndDisplayLineItemTotal()" class="lineitemtot">
+    </div>
+    <div class="col-xs-2 cell" class="lineitemtotForReal">
+        <span class="lineitemtotForReal">{{item.unitPrice * item.quantity}}</span>
+    </div>
+</div>

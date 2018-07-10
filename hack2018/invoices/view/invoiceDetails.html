@@ -1,0 +1,179 @@
+
+	<!--/// MAIN PANEL /////////////////////////////////////////////////// -->
+	<div class="panel panel-custom" ng-init="initInvoiceDetails()">
+
+		<div class="panel-heading bg-custom">
+			<a style="cursor:pointer; float:left;" ng-click="backbutton()" ng-show="{{invoiceListClickToView}}"> < Back</a>
+			<h3 class="panel-title">Invoice Details</h3>
+		</div>
+
+		<div class="paddedThign">
+			<!--/// TOP DETAILS /////////////////////////////////////////////////// -->
+			<br>
+			<div class="row">
+			
+				<div class="col-xs-6">
+					<div class="row">
+						<div class="col-xs-12 text-left"><b>{{invoiceDetails.Customer}} Williams</b></div>
+						<div class="col-xs-12 text-left">{{invoiceDetails.addressVerificationStatus}}</div>
+						<div class="col-xs-12 text-left">Bellevue, WA 98765</div>
+						<div class="col-xs-12 text-left">Phone: (206) 456-9328</div>
+						<div class="col-xs-12 text-left">Email: sillypuddy@bounce.com</div>
+					</div>
+				</div>
+				
+				<div class="col-xs-5" id="toprightsummary">
+					<div class="row">
+						<div class="col-xs-6 trscell trsLeft">Invoice Number</div>
+						<div class="col-xs-6 trscell trsRight">{{currSelectedInvoiceDetails.invoiceID}}</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6 trscell trsLeft">Invoice Date</div>
+						<div class="col-xs-6 trscell trsRight">{{currSelectedInvoiceDetails.invoiceDate}}</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6 trscell trsLeft">Payment Terms</div>
+						<div class="col-xs-6 trscell trsRight" style="font-size: 10px; line-height: 20px;">{{currSelectedInvoiceDetails.termsCondetions}}</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6 trscell trsLeft">Due Date</div>
+						<div class="col-xs-6 trscell trsRight">{{currSelectedInvoiceDetails.dueDate}}</div>
+					</div>
+				</div>
+			</div>
+				<div class="col-xs-1">
+				</div>
+			<br><br>
+
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="row">
+						<div class="col-xs-12 text-left"><b>BILL TO</b></div>
+						<div class="col-xs-12 text-left">Email: sillypuddy@bounce.com</div>
+						<div class="col-xs-12 text-left">{{invoiceDetails.addressVerificationStatus}}</div>
+						<div class="col-xs-12 text-left">Bellevue, WA 98765</div>
+						<div class="col-xs-12 text-left">Phone: (206) 456-9328</div>
+						<div class="col-xs-12 text-left">Email: sillypuddy@bounce.com</div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+
+				</div>
+			</div>
+
+
+		<div id="lineitemarea">
+			<div class="row lightgraytitlebar">
+				<div class="col-xs-2">
+					Item
+				</div>
+				<div class="col-xs-4">
+					Description
+				</div>
+				<div class="col-xs-2">
+					Unit Cost
+				</div>
+				<div class="col-xs-2">
+					Qty
+				</div>
+				<div class="col-xs-2">
+					Line Total
+				</div>
+			</div>
+
+			<div ng-repeat="item in currSelectedInvoiceDetails.invoiceItems">
+				<div class="row">
+					<div class="col-xs-2 grayborder">
+						{{item.itemID}}
+					</div>
+					<div class="col-xs-4 grayborder">
+						{{item.description}}
+					</div>
+					<div class="col-xs-2 grayborder">
+						{{item.unitPrice | currency:"$"}}
+					</div>
+					<div class="col-xs-2 grayborder">
+						{{item.quantity}}
+					</div>
+					<div class="col-xs-2 grayborder">
+						{{item.total | currency:"$"}}
+					</div>
+				</div> 
+			</div>
+
+
+			<div class="row underLineItems">
+				<div class="col-xs-6">
+					<div id="termsAndConditions">
+						<b>Terms and conditions</b>pay within 15 days<br>
+						<b>Note to recipient</b>enjoy your new toys
+					</div>
+				</div>
+				<div class="col-xs-4 grayborder">
+					Invoice Total
+				</div>
+				<div class="col-xs-2 grayborder">
+					{{currSelectedInvoiceDetails.totalAmount}}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+				</div>
+				<div class="col-xs-4 grayborder">
+					Paid to Date
+				</div>
+				<div class="col-xs-2 grayborder">
+					{{currSelectedInvoiceDetails.invoiceDate}}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+				</div>
+				<div class="col-xs-4 grayborder">
+					Balance
+				</div>
+				<div class="col-xs-2 grayborder">
+					{{currSelectedInvoiceDetails.totalAmount}}
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-sm-12">
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="text-center " style="margin-top:7px;">
+						<button type="button" class="btn btn-custom" ng-click="searchBtnHandler()">Send</button>
+						<button type="button" class="btn btn-custom" ng-click="searchBtnHandler()">Edit</button>
+						<button type="button" class="btn btn-custom" ng-click="printInvoice()">Print</button>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+
+
+
+	<!--/// MODAL CANCEL /////////////////////////////////////////////////// -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+
+	      <div class="modal-body">
+	      	Are you sure you want to void the transaction?
+	      
+	      <div class="text-right">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+	        <button type="button" ng-click="voidTransaction()" class="btn btn-custom" data-dismiss="modal">Yes</button>
+	    </div>
+			</div>
+	    </div>
+	  </div>
+
+	</div>
+
+</div></div>
+<!--/// END -  CONTROLLER /////////////////////////////////////////////////// -->
+

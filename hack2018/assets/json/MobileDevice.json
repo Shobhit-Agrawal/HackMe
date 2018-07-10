@@ -1,0 +1,67 @@
+{
+  "title":"Device Json",
+  "Devices": [
+   {
+        "id":1,
+        "DeviceIdentifier":"Apple1",
+        "MobileDeviceStatusID":2,
+        "CreatedDateTime":"03/15/2014",
+        "CreatedByUserId":101,
+        "Description":"This is a new applie device",
+        "PhoneNumber":"4254453986",
+        "DevicePlatform":""
+    },
+    {
+        "id":2,
+        "DeviceIdentifier":"Android2",
+        "MobileDeviceStatusID":2,
+        "CreatedDateTime":"03/15/2014",
+        "CreatedByUserId":102,
+        "Description":"This is a new applie device",
+        "PhoneNumber":"4254453986",
+        "DevicePlatform":""
+    },
+    {
+        "id":3,
+        "DeviceIdentifier":"Microsoft3",
+        "MobileDeviceStatusID":2,
+        "CreatedDateTime":"03/15/2014",
+        "CreatedByUserId":103,
+        "Description":"This is a new applie device",
+        "PhoneNumber":"4254453986",
+        "DevicePlatform":""
+    },
+    {
+        "id":4,
+        "DeviceIdentifier":"Apple4",
+        "MobileDeviceStatusID":2,
+        "CreatedDateTime":"03/15/2014",
+        "CreatedByUserId":104,
+        "Description":"This is a new applie device",
+        "PhoneNumber":"4254453986",
+        "DevicePlatform":""
+    },
+    {
+        "id":5,
+        "DeviceIdentifier":"Apple5",
+        "MobileDeviceStatusID":2,
+        "CreatedDateTime":"03/15/2014",
+        "CreatedByUserId":105,
+        "Description":"This is a new applie device",
+        "PhoneNumber":"4254453986",
+        "DevicePlatform":""
+    },
+    {
+        "id":6,
+        "DeviceIdentifier":"Apple6",
+        "MobileDeviceStatusID":2,
+        "CreatedDateTime":"03/15/2014",
+        "CreatedByUserId":106,
+        "Description":"This is a new applie device",
+        "PhoneNumber":"4254453986",
+        "DevicePlatform":""
+    }
+  ],
+  "statusCode": "Success"
+}
+
