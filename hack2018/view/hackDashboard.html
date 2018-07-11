@@ -1,0 +1,114 @@
+<div item-width="100%" ></div>
+<div id="payments"></div>
+<div id="deposit"></div>
+<div id="failedTransaction"></div>
+<div id="refund"></div>
+<div id="subscriptions"></div>
+<div id="customers"></div>
+</div>
+<script type="text/javascript">
+Highcharts.chart('payments', {
+
+title: {
+    text: 'Payments'
+},
+xAxis: {
+        type: 'datetime',
+        dateTimeLabelFormats: { // don't display the dummy year
+        hour:'%H:%M',
+         
+        }
+    },
+yAxis: {
+    title: {
+        text: 'Volume'
+    }
+},
+legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'middle'
+},
+plotOptions: {
+    series: {
+        dataLabels:{enabled: true},
+        label: {
+            connectorAllowed: false
+        },
+        pointStart: 2
+    }
+},
+series: [{
+    name: '$',
+    data: [1500, 1580, 3200, 3760, 4150, 5600, 8400, 10000]
+}],
+
+responsive: {
+    rules: [{
+        condition: {
+            maxWidth: 500
+        },
+        chartOptions: {
+            legend: {
+                layout: 'horizontal',
+                align: 'center',
+                verticalAlign: 'bottom'
+            }
+        }
+    }]
+}
+
+});
+Highcharts.chart('deposit', {
+
+title: {
+    text: 'Deposits'
+},
+yAxis: {
+    title: {
+        text: 'Volume'
+    }
+},
+xAxis: {
+        type: 'datetime',
+        dateTimeLabelFormats: { // don't display the dummy year
+        hour:'%H:%M',
+         
+        }
+    },
+legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'middle'
+},
+plotOptions: {
+    series: {
+        dataLabels:{enabled:true},
+        label: {
+            connectorAllowed: false
+        },
+        pointStart: 2
+    }
+},
+series: [{
+    name: '$',
+    data: [150, 580, 1200, 1750, 2000, 3500, 4800, 5000]
+}],
+
+responsive: {
+    rules: [{
+        condition: {
+            maxWidth: 500
+        },
+        chartOptions: {
+            legend: {
+                layout: 'horizontal',
+                align: 'center',
+                verticalAlign: 'bottom'
+            }
+        }
+    }]
+}
+
+});
+</script>

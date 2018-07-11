@@ -1,0 +1,73 @@
+<div  class="container" style="justify-content: center;display: flex;align-items: center;" >
+        <div class="panel panel-default">
+                <div class="panel-body">
+    <div ui-view>Daily Summary</div>
+    <div>Choose a date to view summary <select name="weekday" class="right">
+        <option value="Monday">Today</option>
+        <option value="Tuesday">7/11/2018</option>
+        <option value="Wednesday">7/10/2018</option>
+        <option value="Thursday">7/09/2018</option>
+        <option value="Friday">7/08/2018</option>
+        <option value="Saturday">7/07/2018</option>
+        <option value="Sunday">7/06/2018</option>
+        </select></div>
+        <div class="roundcorners">
+            <div style="float:center;">
+                <p>Payments </p>
+               <p class="boldText"> $3,455.00</p>
+               <p> total amount charged</p>
+            </div>
+        </div>
+        <div class="roundcorners">
+            <div style="float:center;">
+           <p> Settled</p>
+          <p class="boldText">  $3,000.00</p>
+          <p>  total amount settled</p>
+        </div></div>
+        <div class="roundcorners">
+                <div style="float:center;">
+                      <p>  Payment Failures</p>
+                      <p class="boldText">  $345.00</p>
+                     <p> total payments failed</p>  
+                    </div>
+        </div>
+        <div class="roundcorners">
+                <div style="float:center;">
+                       <p> Refunds</p>
+                     <p class="boldText">  $251.37</p> 
+                       <p> total amount refunded</p>
+                    </div>
+        </div>
+        <div class="roundcorners">
+                <div style="float:center;">
+                      <p> Customers</p> 
+                      <p class="boldText">  14</p>
+                       <p> new customers</p>
+                    </div>
+        </div>
+        <div class="roundcorners">
+                <div style="float:center;">
+                       <p> Subscriptions</p>
+                      <p class="boldText">  5</p>
+                     <p>  new subscriptions</p> 
+                    </div>
+        </div>
+    </div>  
+    </div>
+    </div></div>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1-dist/css/bootstrap.css" />
+    <style> .roundcorners {
+            border-radius: 25px;
+            background:lightgray;
+            padding: 10px; 
+            width: 300px;
+            height: 100px; 
+            margin-top: 1%;
+            text-align: center;
+            line-height: 5px;
+        }
+
+        .boldText{
+            font-size: 18px; font-weight: bold;
+        }
+        </style>

@@ -2,35 +2,8 @@
 <div id="loginPageID"  ng-controller="LoginController"><!-- Login Page -->
   <div class="panel panel-default">
     	<div class="panel-body">
-  		<form class="form col-md-12 center-block" ng-show="showLoginForm">
-            <div id="loginHeader"><div id="loginHeaderLogo"></div></div>
-            <p ng-show="isAuthError" class=" bg-danger" >
-              The login failed, please try again.
-            </p>
-              <div class="form-group">
-                	<input type="text" class="form-control input-lg" placeholder="Login ID" ng-model="username">
-              </div>
-              <div class="form-group">
-                	<input type="password" class="form-control input-lg" placeholder="Password" ng-model="password">
-              </div>
-              <div class="form-group">
-                  <button class="btn btn-custom btn-lg btn-block btn-block-center" ng-click="login(username,password)">Sign In</button>
-              </div>
-
-              <div>
-                <div class="loginlink">
-                      <a  ng-click="showForgotPassword=true;showLoginForm=false;">Forgot<br>Password?</a>
-                </div>
-                <div class="loginlink">
-                      <a>Need<br>help?</a>
-                </div>
-                <div class="loginlink">
-                      <a ng-click="login('MobileCNP1','Authnet102')">Test<br>Login</a>
-                </div>
-              </div>
-
-          </form>
-          <div data-forgotpassword></div>
+  		
+        <button class="btn btn-custom btn-lg btn-block btn-block-center" ui-sref="OAuthLogin">Sign In</button>
       </div>
   </div>
 

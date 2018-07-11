@@ -20,7 +20,7 @@
             <div ng-class="AfterAuthClass">
                 <!-- Setting Page -->
                 <div id="appMainContainer">
-                    <div headerbar ng-show="isAuthenticated" class="visible-xs"></div>
+                    <div headerbar ng-show="isAuthenticated" ></div>
                     <div ui-view></div>
                 </div>
             </div>
@@ -79,6 +79,11 @@
     <script type="text/javascript" src="directives/address_directive.js"></script>
     <script type="text/javascript" src="directives/modal_directive.js"></script>
     <script type="text/javascript" src="directives/validationdirective.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
     <!--
 	    	Invoices Module  

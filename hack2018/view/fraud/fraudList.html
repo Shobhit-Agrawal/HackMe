@@ -1,0 +1,76 @@
+<script>
+        $(function(){
+            
+            var data=[{
+	"notificationId": "26024a6c-3b78-4d18-8ce7-53dd020aee72",
+	"eventType": "net.authorize.payment.fraud.held",
+	"eventDate": "2018-07-11T17:47:39.7740424Z",
+	"webhookId": "71400fce-085f-46fe-9758-8311ca01d33e",
+	"payload": {
+	 "responseCode": 4,
+	 "authCode": "24904A",
+	 "avsResponse": "Y",
+	 "authAmount": 50000.0,
+	 "fraudList": [
+		{
+		 "fraudFilter": "AmountFilter",
+		 "fraudAction": "authAndHold"
+		}
+	 ],
+	 "entityName": "transaction",
+	 "id": "2154067719"
+	}
+} ,
+{
+	"notificationId": "43024a6c-3b78-4d18-8ce7-53dd034aee72",
+	"eventType": "net.authorize.payment.fraud.held",
+	"eventDate": "2018-07-10T17:47:39.7740424Z",
+	"webhookId": "71400fce-085f-46fe-9758-8311ca01d33e",
+	"payload": {
+	 "responseCode": 4,
+	 "authCode": "24564A",
+	 "avsResponse": "Y",
+	 "authAmount": 250000.0,
+	 "fraudList": [
+		{
+		 "fraudFilter": "AmountFilter",
+		 "fraudAction": "authAndHold"
+		}
+	 ],
+	 "entityName": "transaction",
+	 "id": "2154067721"
+	}
+}];
+            
+            var str = '<ul >';
+    
+            for(var i in data){
+                var item = data[i]; 
+                str += '<li><a href="#">$'+item.payload.authAmount +' Fraud Pending</a></li>';
+               
+                }
+           
+    
+    str += '</ul>';
+    
+    $('.panel-body').append(str);
+    $.getJSON('http://api.webhookinbox.com/i/LXFpPaKE/items/', function(data) {
+        console.log(data.items[0].body);
+    });
+    });
+    </script>
+    <div>
+       
+    
+        <div class="panel panel-default">
+          <div class="panel-heading bg-custom">
+              <h3 class="panel-title ">Fraud
+              </h3>
+          </div>
+            <div class="panel-body">
+            </div>
+        </div>
+    
+    </div>
+    
+    

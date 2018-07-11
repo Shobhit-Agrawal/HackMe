@@ -35,12 +35,7 @@ authorizeNet.config(function($stateProvider,$urlRouterProvider) {
 	
 
 	$stateProvider
-		// route for the settings page
-		.state('oAuthInitBtnPage',{
-			url:"/oAuthInitBtnPage",
-			templateUrl:'view/oAuthInitBtn.html',
 	
-		})
 		.state('about', {
 			url:"/about",
 			templateUrl : 'view/about.html'
@@ -79,6 +74,48 @@ authorizeNet.config(function($stateProvider,$urlRouterProvider) {
 		.state('translate',{
 			url:"/translate",
 			templateUrl:'view/settings/Translate.html'
+		})
+		.state('hackDashboard',{
+			url:"/hackDashboard",
+			templateUrl:'view/hackDashboard.html'
+		})
+		.state('liveFeed',{
+			abstract: true,
+			templateUrl:'view/liveFeed/liveFeed.html'
+//controller:'liveFeedController'
+		})
+		.state('liveFeed.liveFeedList',{
+			url:"/liveFeedList",
+			templateUrl:'view/liveFeed/liveFeedList.html'
+		})
+		.state('liveFeed.liveFeedType',{
+			url:"/liveFeed.liveFeedType",
+			templateUrl:'view/liveFeed/liveFeedType.html'
+		})
+		.state('fraud',{
+			abstract: true,
+			templateUrl:'view/fraud/fraud.html'
+//controller:'liveFeedController'
+		})
+		.state('fraud.fraudList',{
+			url:"/fraud.fraudList",
+			templateUrl:'view/fraud/fraud.html'
+		})
+		.state('fraud.fraudDetails',{
+			url:"/fraud.fraudDetails",
+			templateUrl:'view/fraud/fraudDetails.html'
+		})
+		.state('dailySummary',{
+			url:"/dailySummary",
+			templateUrl:'view/dailySummary.html'
+		})
+		.state('OAuthLogin',{
+			url:"/oAuthLogin",
+			templateUrl:'view/OAuthLogin.html'
+		})
+		.state('setUp',{
+			url:"/setUp",
+			templateUrl:'view/setUp.html'
 		})
 		.state('mintSettings',{
 			url:"/mintSettings",
