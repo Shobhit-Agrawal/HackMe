@@ -36,6 +36,11 @@ authorizeNet.config(function($stateProvider,$urlRouterProvider) {
 
 	$stateProvider
 		// route for the settings page
+		.state('oAuthInitBtnPage',{
+			url:"/oAuthInitBtnPage",
+			templateUrl:'view/oAuthInitBtn.html',
+	
+		})
 		.state('about', {
 			url:"/about",
 			templateUrl : 'view/about.html'
@@ -83,7 +88,7 @@ authorizeNet.config(function($stateProvider,$urlRouterProvider) {
 			url:"/pageSetup",
 			templateUrl:'view/pageSetup.html',
 			controller:'pageSetupController'
-		})
+		})				
 		.state('dashboard.transactionDetails',{
 			url:"/details",
 			templateUrl:'view/virtualTerminal/transactionDetails.html'
