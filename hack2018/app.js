@@ -135,6 +135,13 @@ authorizeNet.config(function($httpProvider) {
 //	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 });
 
-
+function sendtoNative(msg) {
+	if(window.JSToAndroidInterface !==undefined && msg.indexOf('handShake') === -1 ){
+			window.JSToAndroidInterface.sendMessage(msg);
+	}
+	else if (window.webkit !== undefined)
+			window.webkit.messageHandlers.iosMessenger.postMessage(msg);
+	//else alert("Andorid and iOS Not found");
+}
 
 

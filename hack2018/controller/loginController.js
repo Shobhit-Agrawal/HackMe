@@ -6,6 +6,9 @@ authorizeNet.controller("LoginController", ['$http', '$location', '$scope', 'pub
     
     
     $scope.login = function(username, password) {
+
+        
+
         $scope.hideMenu();
         $scope.username = username;
         $scope.password = password;

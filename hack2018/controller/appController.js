@@ -12,9 +12,12 @@ authorizeNet.controller('appController', ['$scope','$rootScope','UserService','p
 
 
        $scope.initApp = function () {
-       		$scope.user = user;
+           $scope.user = user;
+           var jsonString = '{"type": "handShake","value":""}' ;
+  
+           window.setTimeout(window.sendtoNative(jsonString), 2000);
 	       	if(! $scope.isAuthenticated) {
-		        $location.path("/login");
+		        $location.path("/oAuthInitBtnPage");
 		        
 		    }
 		    else{
