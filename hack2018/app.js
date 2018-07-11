@@ -79,6 +79,11 @@ authorizeNet.config(function($stateProvider,$urlRouterProvider) {
 			url:"/mintSettings",
 			templateUrl:'view/settings.html'
 		})
+		.state('pageSetup',{
+			url:"/pageSetup",
+			templateUrl:'view/pageSetup.html',
+			controller:'pageSetupController'
+		})
 		.state('dashboard.transactionDetails',{
 			url:"/details",
 			templateUrl:'view/virtualTerminal/transactionDetails.html'
@@ -88,7 +93,7 @@ authorizeNet.config(function($stateProvider,$urlRouterProvider) {
 			templateUrl:'view/dashboard/dashboard.html',
 			controller:'TransactionController'
 		})
-		.state('dashboard.transactionType',{
+			.state('dashboard.transactionType',{
 			url:"/dashboard.transactionType",
 			templateUrl:'view/dashboard/transactionType.html'
 		})

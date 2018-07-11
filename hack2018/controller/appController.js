@@ -64,8 +64,8 @@ authorizeNet.controller('appController', ['$scope','$rootScope','UserService','p
 
       // GLOBAL UI CONTROLS ///////////////////////////////////////////////////////////////////////////////////////////////////////////
       var vr = $rootScope.isMobile?"Make Payment":"Virtual Terminal";
-      $scope.currentPageHeaderArr = ["Dashboard", vr, "Transactions", "Settings"];
-      $scope.currentPageIconArr = ["fa fa-th-list", "fa fa-university", "fa fa-retweet", "fa fa-cog"];
+      $scope.currentPageHeaderArr = ["Set Up", vr, "Transactions", "Settings"];
+      $scope.currentPageIconArr = ["fa fa-cog", "fa fa-university", "fa fa-retweet", "fa fa-cog"];
       $scope.currentPageMenuIcon =  ["orange", "blue", "blue", "blue"];
 
       $scope.currentPageHeader = $scope.currentPageHeaderArr[0];
