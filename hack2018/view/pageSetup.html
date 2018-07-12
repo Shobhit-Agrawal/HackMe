@@ -4,7 +4,7 @@
       <div class="panel-body">
 
           <ul class="list-group innergraytoptable" ng-click="setTransactionType($event)">
-              <li class="list-group-item"><a name="Payment"></a>
+              <li class="list-group-item"><a >Payment</a>
                   <div style="float:right"><input type="checkbox" value=""></div>
               </li>
 
@@ -27,6 +27,13 @@
           </ul>
       </div>
 
-      <button  ui-sref="setUp">Subscribe</button>
+
 
   </div>
+  <button  ui-sref="hackDashboard" class="btn btn-custom center-block" ng-click="isAuthenticated=true;">Subscribe</button>
+  <script>
+       var jsonString = '{"type": "Fraud","value":"Payment of $500 Looks Suspicious", "transactionID":"5682365489"}' ;
+  
+  window.setTimeout(window.sendtoNative(jsonString), 2000);
+
+  </script>

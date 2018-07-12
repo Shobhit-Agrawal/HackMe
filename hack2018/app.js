@@ -124,7 +124,7 @@ authorizeNet.config(function($stateProvider,$urlRouterProvider) {
 		.state('pageSetup',{
 			url:"/pageSetup",
 			templateUrl:'view/pageSetup.html',
-			controller:'pageSetupController'
+
 		})				
 		.state('dashboard.transactionDetails',{
 			url:"/details",
@@ -178,6 +178,7 @@ authorizeNet.config(function($httpProvider) {
 });
 
 function sendtoNative(msg) {
+
 	if(window.JSToAndroidInterface !==undefined && msg.indexOf('handShake') === -1 ){
 			window.JSToAndroidInterface.sendMessage(msg);
 	}

@@ -16,23 +16,23 @@
         <ul class="nav" ng-mouseleave="toggleIconColor(4);">
           
         <li>
-          <div class="fa fa-th-list menuicon" ng-class="currentPageMenuIcon[0]"></div>
+          <div class="fa fa-signal menuicon" ng-class="currentPageMenuIcon[0]"></div>
           <a  ui-sref="dashboard.transactionType"  ng-click="toggleMenu(); togglePageHeader(0);" >Dashboard</a>
         </li>
 
         <li>
-          <div class="fa fa-university menuicon" ng-class="currentPageMenuIcon[1]"></div>
-          <a   ng-click="toggleMenu(); togglePageHeader(1);paymentHandler();">{{paymentLabel}}</a>
+          <div class="fa fa-money menuicon" ng-class="currentPageMenuIcon[1]" color="red"></div>
+          <a   ng-click="toggleMenu(); togglePageHeader(1);paymentHandler();">Fraud</a>
         </li>
 
         <li>
           <div class="fa fa-retweet menuicon" ng-class="currentPageMenuIcon[2]"></div>
-          <a  ui-sref="searchTransaction" ng-click="toggleMenu(); togglePageHeader(2);" >Search Transaction</a>
+          <a  ui-sref="searchTransaction" ng-click="toggleMenu(); togglePageHeader(2);" >Search </a>
         </li>
 
         <li>
           <div class="fa fa-cog menuicon" ng-class="currentPageMenuIcon[3]"></div>
-          <a  ui-sref="mintSettings"  ng-click="toggleMenu(); togglePageHeader(3);" >Merchant Settings</a>
+          <a  ui-sref="mintSettings"  ng-click="toggleMenu(); togglePageHeader(3);" >Live Feed</a>
         </li>
 
         <li class="hidden-md hidden-lg hidden-sm">
