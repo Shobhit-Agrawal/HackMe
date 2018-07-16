@@ -100,19 +100,19 @@ authorizeNet.service('AnetAPIService', ['$http','$q','UserService','TransactionS
 
     },
     callUnsattledTransactionList: function(){
-       var reqStr = "<getUnsettledTransactionListRequest xmlns='AnetApi/xml/v1/schema/AnetApiSchema.xsd'><merchantAuthentication><name>"+apiKey+"</name><transactionKey>"+transactionKey+"</transactionKey></merchantAuthentication></getUnsettledTransactionListRequest>"
-       var deferredUnsattled = $q.defer();
-       callServer(reqStr).then(function(result){
-          if(result.getUnsettledTransactionListResponse.messages.resultCode === "Error") {
-                // TO DO error handling logging.
-                deferredUnsattled.reject(result);
-          } else {
-                  TransactionService.setUnsettledTransactions(result.getUnsettledTransactionListResponse.transactions.transaction)
-                  deferredUnsattled.resolve(TransactionService.getUnsattledTransactionArr());
+      //  var reqStr = "<getUnsettledTransactionListRequest xmlns='AnetApi/xml/v1/schema/AnetApiSchema.xsd'><merchantAuthentication><name>"+apiKey+"</name><transactionKey>"+transactionKey+"</transactionKey></merchantAuthentication></getUnsettledTransactionListRequest>"
+      //  var deferredUnsattled = $q.defer();
+      //  callServer(reqStr).then(function(result){
+      //     if(result.getUnsettledTransactionListResponse.messages.resultCode === "Error") {
+      //           // TO DO error handling logging.
+      //           deferredUnsattled.reject(result);
+      //     } else {
+      //             TransactionService.setUnsettledTransactions(result.getUnsettledTransactionListResponse.transactions.transaction)
+      //             deferredUnsattled.resolve(TransactionService.getUnsattledTransactionArr());
              
-          }
-       });
-      return deferredUnsattled.promise;
+      //     }
+      //  });
+      // return deferredUnsattled.promise;
     },
     callTransactionDetails : function(transId){
       // transId = "2214266322";

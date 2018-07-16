@@ -1,0 +1,63 @@
+<script type="text/javascript">
+   $(function(){
+      
+        $.getJSON('http://api.webhookinbox.com/i/Vol3EJCA/items/', function(data) {
+            
+        var str = '<div style=" list-style: none;">';
+      for(var index=0;index <data.items.length;index++)
+      {
+        var item= JSON.parse(data.items[index].body);
+        console.log(item);
+        var eventName=null;
+        var iconPath=null;
+     switch(item.eventType)
+     {
+          case "net.authorize.customer.paymentProfile.created":
+          eventName="New Customer";
+          iconPath="assets/img/customer.png";
+          break;
+          case "net.authorize.payment.authcapture.created":
+          eventName="Payment";
+          iconPath="assets/img/creditcard.png";
+          break;
+          case "authAmountnet.authorize.payment.capture.created":
+          eventName="Deposit";
+          iconPath="assets/img/creditcard.png";
+          break;
+          case "net.authorize.payment.fraud.held" :
+          eventName="Fraud";
+          iconPath="assets/img/warning.png";
+          break;
+          case "net.authorize.customer.created": 
+          eventName="New Customer";
+          iconPath="assets/img/customer.png";
+          break;
+     }
+     if(item.payload.authAmount)
+    {
+        str += '<div><img style="width:15px;height:15px; margin-right:5px; margin-top:10px;" src='+iconPath+' /><a href="#"> $'+item.payload.authAmount + '  '+   eventName+'</a></div>';
+    }
+    else
+    {
+      str += '<div><img style="width:15px;height:15px; margin-right:5px;margin-top:10px;" src='+iconPath+' /><a href="#"> '+item.payload.merchantCustomerId + '  '+   eventName+'</a></div>';
+    }
+      }
+       
+    str += '</div>';
+    $('.liveFeed-body').append(str);
+   });
+           
+});
+</script>
+<div>
+	<div class="panel panel-default">
+	  <div class="panel-heading bg-custom">
+	  	<h3 class="panel-title ">Live Events Feed
+	  	</h3>
+	  </div>
+		<div class="liveFeed-body">
+            
+		</div>
+	</div>
+</div>
+

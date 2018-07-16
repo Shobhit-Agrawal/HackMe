@@ -79,31 +79,31 @@ authorizeNet.controller('TransactionController', ['$scope','$http','$state','Tra
     
   }
   function updateSettledTransactionList(){
-      pubSubFactory.publishEvent("TOGGLE_LOADER");
-      var promise = apiService.callSattledTransactionList();
-      promise.then(function(transactionArr){ 
-        $scope.settledTransCount = TransactionService.getSattledTransactionArr().length;
-        $scope.refundTransCount = TransactionService.getRefundedTransactionArr().length;//alert(transactionArr[0].transId); 
-        updateUnsettledTransactionList();
-        //$scope.displayGrid = true;
-      })
+    //   pubSubFactory.publishEvent("TOGGLE_LOADER");
+    //   var promise = apiService.callSattledTransactionList();
+    //   promise.then(function(transactionArr){ 
+    //     $scope.settledTransCount = TransactionService.getSattledTransactionArr().length;
+    //     $scope.refundTransCount = TransactionService.getRefundedTransactionArr().length;//alert(transactionArr[0].transId); 
+    //     updateUnsettledTransactionList();
+    //     //$scope.displayGrid = true;
+    //   })
   
   }
   function updateUnsettledTransactionList(){
-      var promise1 = apiService.callUnsattledTransactionList();
-      promise1.then(function(transactionArr){
-        //alert(TransactionService.getUnsattledTransactionArr()[0].transId); 
-        $scope.unsettledTransCount = TransactionService.getUnsattledTransactionArr().length;
+    //   var promise1 = apiService.callUnsattledTransactionList();
+    //   promise1.then(function(transactionArr){
+    //     //alert(TransactionService.getUnsattledTransactionArr()[0].transId); 
+    //     $scope.unsettledTransCount = TransactionService.getUnsattledTransactionArr().length;
        
-        $scope.voidTransCount = TransactionService.getVoidedTransactionArr().length;
+    //     $scope.voidTransCount = TransactionService.getVoidedTransactionArr().length;
        
-        pubSubFactory.publishEvent("TOGGLE_LOADER");
-        $scope.dashBoardChart = feedChartData();
+    //     pubSubFactory.publishEvent("TOGGLE_LOADER");
+    //     $scope.dashBoardChart = feedChartData();
         
-      },function(error){
-          console.log(error);
-         pubSubFactory.publishEvent("TOGGLE_LOADER");
-      })
+    //   },function(error){
+    //       console.log(error);
+    //      pubSubFactory.publishEvent("TOGGLE_LOADER");
+    //   })
   }
 
   function updateDashboard(){

@@ -17,12 +17,12 @@
           
         <li>
           <div class="fa fa-signal menuicon" ng-class="currentPageMenuIcon[0]"></div>
-          <a  ui-sref="dashboard.transactionType"  ng-click="toggleMenu(); togglePageHeader(0);" >Dashboard</a>
+          <a  ui-sref="hackDashboard"  ng-click="toggleMenu(); togglePageHeader(0);" >Dashboard</a>
         </li>
 
         <li>
           <div class="fa fa-money menuicon" ng-class="currentPageMenuIcon[1]" color="red"></div>
-          <a   ng-click="toggleMenu(); togglePageHeader(1);paymentHandler();">Fraud</a>
+          <a   ui-sref="fraud.fraudDetails">Fraud</a>
         </li>
 
         <li>
@@ -32,7 +32,11 @@
 
         <li>
           <div class="fa fa-cog menuicon" ng-class="currentPageMenuIcon[3]"></div>
-          <a  ui-sref="mintSettings"  ng-click="toggleMenu(); togglePageHeader(3);" >Live Feed</a>
+          <a  ui-sref="liveFeed.liveFeedType"  ng-click="toggleMenu(); togglePageHeader(3);" >Live Feed</a>
+        </li>
+        <li>
+          <div class="fa fa-cog menuicon" ng-class="currentPageMenuIcon[4]"></div>
+          <a  ui-sref="dailySummary"  ng-click="toggleMenu(); togglePageHeader(4);" >Daily Summary</a>
         </li>
 
         <li class="hidden-md hidden-lg hidden-sm">
